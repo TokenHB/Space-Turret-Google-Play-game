@@ -1,0 +1,2156 @@
+Clash and slash clone - make planet a space station and mix up the UI
+ (This will be my first release) try using an invisible circular movie Clip that that tests if the gun or ship is still colliding with it.. If yes, then allow the movement.. If no, then bounce the gun back to the edge. Chris made a suggestion about giving the player an option to use one on screen joypad to control the ship movement/shooting.. Like the mouse for the flash version
+
+
+THINKING ABOTU CHANIGN THE NAME TO "STATION UNDER ATTACK!" WITH THE EXCLIMATION POINT
+ THE SPACE DEFENCE.. MIGHT LEAD PEEPS TO THINK ITS A TOWER DEFENSE GAME... 
+
+ 
+Quick todo:
+ 
+Missle logic. - done
+ Laser logic - done
+ Accelerameter logic.  - done
+ Touch to fire logic - done
+ Points logic - there is a multiplier already in place.. Will make indivial enemies
+                              have different point values
+ Enemy HP logic - might have all enemies have 1 HP.. Except bosses
+ Station damage logic - done
+ Turrent damage logic - done
+ Turrent respawn logic - done
+ Font coding - done
+ Menus - imported... Need to fix and found possible bug for the buttons
+ Levels - coding for each level.. 50 differ time lines
+ Moniterization  - April to June
+ Turrent movement buffer - if possible - June
+ 
+
+
+Update: was thinking about dumbing the game down a little.. Making it more like the astroids game from Atari..  This way I can give out the game for freeeeeee
+   And monaeterize the upgrades and bonus weapons.. Was thinking of using ore as currency.. The story goes that ur on the farthest reaches of space looking to mine ore for space stations and large ships.. Since the alien space ships are also made of metal, then when you blow stuff up, u can get ore from it.. Was thinking about making it automatic drop.. The alternative is u have to shoot the wrack gee of the ship.. Might be too complex.. Maybe larger ships might have to get shot up more then once.. With the ore, you can invest it into reaching upgrades of bonuses and buying new bonuses.. This way there is more of an Angry birds kinda feeling.. I would like to make all new achievements and provide ore rewards for completing the mor difficult ones.. Of course, there is always a buy ore packet or upgrade directly thru in game purchase.. Want them to be similarly priced to the astroids game.
+ 
+Just like the astroids game, the store screen will be before the main game engine loop.. Also am thinking of coloring the ship/
+ 
+Hitpoint marker update- I think I will make the turrent / station have a color
+                   darkening effect to show its blowing up.. With the color change, the
+                   they will also look blown up.. Swapping out sprites.. Thinking about
+                    a new more blown up sprite with every 10%
+ 
+Level selection update - am thinking about stars that go from bronze to gold.
+             This way, every board u will will have four possible feedbacks for the
+              three stats.. One is the accuracy, one is points, need one more.
+               Angry birds gives output stars only for the score... Not good
+ 
+Moneritization of upgrades:  I was thinking of making the upgrades cost
+                  Ore to purchase but I think it should take some time or more then an
+                  instant upgrade.. I think each upgrade should cost a few ore so it
+                 it forces the player to replay missions or keep playing to advance
+                 The upgrades.. Special, Station, turrent, weapons in the order from
+                  most expensive to least expensive. Then each upgrade with in the
+                  type will go up in expense.  Lastly, the player can purchase a
+                  temporary upgrade that will last a few seconds - this should be
+                  Cheaper and use a small version of the upgrade icon in the top
+                  right before the clip icons ( a ore sink but can help the players
+                  in a tight spot.
+ 
+Per the asteroid gunner game: the upgrade levels ares...
+ 1 - 5000
+ 2 - 10000
+ 3 - 50000
+ 4 - 100000
+ So one can assume that
+ 5 - 150000
+ 6 - 250000
+ 7 - 400000
+ 8 - 600000
+ 
+The more hardcore items started at level 1 25,000 and level 2 was 50,000
+   Then assuming the same.. Level 3 - 100,000 level 4  - 200,000
+    level 5 - 400,00
+ 
+I'm thinking that the player could go up in rank based on the score he gets..
+ S only higher ranking officer can buy the top secret items.. This limits the
+ "Pay to win" aspect.. The player needs to get a gold star in most of the boards
+  To reach a high rank and a platinum to reach Rear Admiral
+ 
+
+
+
+General info:
+ 
+The game is from the ship's flyers point of view.. So the communication to the player all comes from the station. The station chief are clones.. That explains why they might all sound the same.
+ 
+Ship/ gun - I would like just one barrel that can change to match the type
+                         Of weapon equippent
+ 
+
+engine parts:
+ Movement of player- this is almost done.. would like to add the virtual
+                                           Joystick option - has a flick in the left side.. Will
+                                            need to correct the left side. -done
+ 
+Spawning of player - needs to set up player life and player reload
+ 
+
+
+Spawning of enemies - tired mathematical spawning and that does not work
+                                              I'm going to try making spawn zones just outside
+                                              The stage area.. The enemies will have the same
+                                              X an Y value as the spawn point.. Leads to below...
+                                             Also would like to script what type and where
+                                              I'm thinking of a pool of enemy types.. Like a max
+                                              Number of enemies of 1 type.. As a spawner creates
+                                              One, one is removed until all enemies of that type
+                                              Are gone. Need to space them out some how...
+         (Note: most enemies have a direction they face.. A solution to that is to
+                       set the sprite index to the same number as the spawner
+                                               -done
+ 
+Movement of enemies - I want to add some variety.. Maybe zig-zag.. Use
+                                                  Paths to set up the more adv enemies' movement
+                                                  - done
+ 
+Player shooting - this seams simple enough.. Need to set up for different
+                                    Weapon types.. Speeds of shot and clip sizes.  -done
+ 
+Bullet marker - Might use a fx like gears 1 to mark shot
+                               Also thinking about using text.. Like aliens pulse rifle - done
+ 
+Collision detection - shipxenemies, enemiesxshots, enemiesxspacestation,
+                                         enemies specials(barrels of the original),
+                                          enemiesxcomet, astroidxshots, cometxshots
+ 
+Note: I want to use the vibration to alert the player of hits and time running out
+ 
+Space objects - comets and astroid belts... Have the astroid belts be a group of astroid on the left or right of the screen.. Never in a circle around the station... They will hurt both the bullets and the enemies.. Meteros showers come in at an 45 degree angle from a corner.. The comer starts on the upper right and goes clockwise around the screen.
+ 
+upgrades - ship - move faster, better shields, repair drones, muzzle speed
+                       Space station - repair bots, shield strength increase, ship faster respawn
+ 
+Life markers- make some nice icons that will change color from bright green
+                             To black.. This will be another difference from the original
+ 
+Background animiation - space background -  fx only rings like saturn
+                         I want the planet and moons to orbit the screen edges to make
+                         look like we are seeing the station move around its orbit
+                         sun star, saturn like, planet with 2 moons, a wormhole
+                         Normal planet, planet with 1 moon, asteroid field.
+ 
+Sound fx / music - techno music that changes.. Say about 12 songs.. 1 song per level,
+                                       1 song per mini boss, 1 song for the final stage, title song
+ 
+Scoring - points/enemy... Points/ boss.. Points/specials - I want to give the player extra points for shooting the enemy either further out or closer to
+ The station.. Like there are a max point score and shooting the enemy will take away from the depending on distance to the station.. This can be done with a trimmer.. The longer the enemy lives.. The close it is to the station..
+ These extra points can give the player an extra nuke.. See below..
+ Scoring advanced - I want to give the player a score multiplier for not missing a shot.. For multi shot.. At least one of the shots has to hit and enemy.. Space objects do not count as multipliers.
+ --- I think making a "shot group" variable might be a solution.. For each shot, a shot group is created with the value of how many bullets per shot.. If the numbers match when all the bullets reach the edge of the screen, then the multiplier it times 0.. Which would reset it... If a bullet hits an enemy or an object tat counts, a -1 is added to the shot group.. At the end, if the shots per group is greater the the value in the shot group we add 1 to the total score multiplier..
+  --- another idea is making an array that stores each shot group, the bullet instance number and the score multiplier value.. We could remove one of the top most array entires per reload or once the all the instances of the shot group are destroyed, we can remove that shot group array entry
+ ----The points per mission will go into the millions and will be used to make a new achievement in both the normal game and the DLC.
+ 
+Tactical Nuke - these nukes are player button launched and are given based on getting a certain score level like the arcade games of old.. They are not easy to get but blow up all enemies in the screen at the time of launch.. The button stays on screen but is blacked out until the player gets a Nuke. It is to the lower  right of the middle of the screen under the charged shot bottom next to the regular shot.
+ 
+Charged shot - this shot takes 1 sec to shoot and it makes the next shot type 2x bigger then normal... Even the missiles are bigger and make a bigger explosion size.
+         - done
+ 
+Perpetual wave shot - thinking about making this one of the later I'd not last
+                                              guns in the game. Sin angle and cosin angle  - done as straight
+ 
+Levels:
+ 
+Wave 1 - normals
+ Wave 2 - more normals then 1st wave
+ Wave 3 - space mines pop up close to station
+ Wave 4 - astroids
+ Wave 5 - missiles shot at the station
+ Wave 6 - mines and missile
+ Wave 7 - meteors and  and mines
+ Wave 8 - asteroids and missiles and mines
+ Wave 9 - mines and meteors and astroids and missiles
+
+update - I have commets, asteroids orbit , asteroids attack , missles
+Wave 1 - normals
+ Wave 2 - more normals then 1st wave
+ Wave 3 - asteroids orbit
+ Wave 4 - astroids attack
+ Wave 5 - missiles shot at the station
+ Wave 6 - asteroids orbit and missile
+ Wave 7 - commet  and  asteroids orbit
+ Wave 8 - asteroids orbit and missiles and commets
+ Wave 9 - astroids orbit and commet and astroids attack and missiles
+
+Wave 1 - normals
+ Wave 2 - more normals then 1st wave
+ Wave 3 - asteroids orbit
+ Wave 4 - astroids attack
+ Wave 5 - missiles shot at the station
+ Wave 6 - asteroids orbit and missile
+ Wave 7 - commet  and  asteroids orbit
+ Wave 8 - asteroids orbit and missiles and commets
+ Wave 9 - astroids orbit and commet and astroids attack and missiles
+
+
+
+ 
+The levels will be named "Station 1 wave 1" or if the text is legible enough use the Greek letters Alpha, Beta, Delta, Gamma, Omega, Zeta
+ Logic: the smaller ships of the alien invasion force travel thru space faster then their mothership. Alpha is the first and the main base of the human colonies. As the player progresses, he is encountering the harder enemies that lead up to the mothership which will be attacking the last base ,Zeta.. This don't sound right.. Gotta think this over again
+ 
+I want to have an angry birds type star system per level.. Each star can be a specific mini achievement..
+ 1 star can be for accuracy of 90% or more
+ 1 star could be after a certain score is reached
+ 
+This is a one star icon per level. The bronze is for beating the level.. The
+  silver could be accuracy and the gold a certain score and the platinum could
+  Be no damage taken... Or it could just increase the star level with each of these mini achievements.. So it stars with bronze and add what ever the other
+ achievements  are won during  play. This bonus to this is that each level icon
+ Takes up less space and can be larger per page which is better for fones.
+ 
+
+Kartzan Enemies:
+ normal enemies - fly straight into the space station. Come in different colors.
+                                    damage -100
+ Adv enemies - they fly in sine waves toward the space station.  -150
+ 
+Super enemies - fly in waves toward the player. -200 - cloaked until 200 pix
+                                  - can set the alpha in script to make it 70% so it's nearly
+                                     visible until the distance is x from the station
+ 
+Ultra enemies - try to avoid being shot. -250 - zig-zag path or wave path
+ 
+Mini carriers - when shot, the become 3 normal ships.  -300 - spiral path
+ 
+Mothership - circles just at the border of the screen and shots at the player. It also releases ultra enemies. Has the most hitpoints - slow spiral path
+ 
+Every 10 "missions" have a bigger version of the new enemy type presented as a mini boss.. I would like each boss to have a different fighting style or "pattern"
+ 
+paths:
+ 
+see above for the path's type. The paths are orientated north,south,east, west
+  I would like there to be a random path selection. Also ,with the exception to the spiral, each path ,north,south,east, west, has a slightly different shape..
+ For example... The north path can have tighter loops ten the west or the south has vey close loops where as the east has very spacious loops.
+ The spirals have different travel speeds for spawned enemy. The boss's speed is super slow
+ 
+Weapons:
+ 
+Standard shot - straight shooting mini beam shot
+        Upgrades: shoot faster, flys faster, reload faster, larger clip
+ 
+Shotgun(spread shot) - shoots 3 standard shots at a time. Slightly slower then the
+     standard shot.  45<,  90<, 135< .. When gun is pointing at top of screen.
+        Upgrades: shoot faster, flys faster, reload faster, larger clip, add 2 more
+                             barrels.. 45<, 25<, 90<, 115<, 135<
+ 
+Torpedo - slowest shot. travels the slowest. Longer reload
+      Upgrades: shoot faster, flys faster, reload faster, larger clip, multi-
+                              torpedo. Shoots like the shotgun (3 torps.)
+ 
+Super beam - large slow beam lasts a second.. Kills normal, adv and super enemies in one
+                            shot.
+      Upgrades: lasts 1 more second, wider beam, faster recovery(reload)
+ 
+
+**************removed for 1st release ******************
+ Slow time and freeze time capsules: they look like Dr. Mario type pills.
+       When hit by the player, the change the movement speed of all objects by a fixed amount.. For example hitting a certin color slow capsule wil reduce enemy movement speed by 10% an other color. 30% and filament the freeze
+ capsules will stop the movements often enemies.. These capsules have different colors from green,yellow, red and the freeze one is royal blue.
+ They appear at random times. The coding is as follows:
+ 
+Speed = x * CapModifer;       ( where x is the current coded speed or variable)
+ 
+Green capsule = CapModifer = .9
+ Yellow capsule = CapModifer = .8
+ Red capsule = CapModifer = .7
+ Blue capsule = CapModifer = 0
+ **************removed for 1st release ******************
+ 
+
+Space station upgrades:
+ Player spawing increase -  +10% - + 15% - + 20% -+ 25% - + 30%
+ HPs increase - +10% - + 15% - + 20% -+ 25% - + 30%
+ Repair ( hp repair increase)  - on
+ Repair increase- +10% - + 15% - + 20% -+25%
+ shields - on - + 10% - + 15% - + 20% -+ 25%
+ Freeze defense cannon - on - + 10% - + 15% - + 20% -+ 25%
+                                                   (this is fire rate in random direction)recharge time
+ Domino defense cannon -on - + 10% - + 15% - + 20% -+ 25%
+                                                    (this is fire rate in random direction)recharge time
+ 
+Ship/gun upgrades:
+ Guns - normal - shot gun - perpetual - missile - laser
+ Fire rate - shoots -  + 10% - + 15% - + 20% -+ 25% - + 30%
+ Clip size - normal - + 10% - + 15% - + 20% -+ 25% - + 30%
+ Turret Move rate - + 10% - + 15% - + 20% -+ 25% - + 30%
+ Repair - on - + 10% - + 15% - + 20% -+ 25%
+ shields - on - + 10% - + 15% - + 20% -+ 25%
+ hit point increase - +10% - + 15% - + 20% -+ 25% - + 30%
+ 
+
+Intro:
+ 
+Classic intro " in the year 3021...man...space...evil..." scrolling not star wars scrolling
+ 
+Station names:   Alpha, Beta, Delta, Gamma, Omega, Zeta
+ 
+Story:
+ 
+ In the year 3021.. The planet earth has become uninhabitable due to man's negligence and abuse of it's natural resources. Space has become the new home for the displaced Terran people. Luckily, humans have developed space stations that can harbor life for infinite amount of time. However, the constant need for resources has forced man to venture further into unexplored deep space.
+    A unknown hostile race called , Kartzans, has encountered a lone farthest reaching Terran space station.. Zeta Staton.
+   Alerted of the immanent menace,  Zeta was switched its processes from resource collecting to the art of war. It's on-board scientist are frantically rushing to augment both the defensive and offensive capability of the station.. For they know the clocks ticking against them..
+ 
+Station director: "Turrent gunner.. Can you read me?"
+ 
+Gunner: " Yeah.. Umm.. Has anyone actually tested this thing? I told
+                     The girl that I'm just a janitor..."
+ 
+Station director:  " Sure.. sure.. We tested it.. And I'm sure you'll do just fine..
+                                      Well.. It looks like we ran out of time.. The enemies should
+                                     be here any minute... Good luck out there!"
+ 
+Gunner: "Oh boy......"
+ 
+Voice acting:  full intro narration with separate characters. Station / player will sound like radio communication.. Staticy and electronic. All the lines spoken will have subtitles.
+ 
+
+
+UI:
+ 
+Menu screens.. I want to make use of the particle system, if possible, to make a moving star field behind the menu buttons to give the screens life..
+ 
+In clock wise fashion.. The top left corner of the screen will be the player score. The top right will be the bullet marker. The right middle will be have three buttons.. The bigger one is the regular shot.. The other two of the same size are the charged shot and the nuke button.. The charged on top.
+ The lower right is the station hit point marker.. The lower left is the virtual joystick if activated. All the UIs for the game screens are transparent.
+ 
+
+
+left to be the ships HPs in a small transparent box.. The right is for the space station
+ The bottom will have the voice work subtitles. The top will have the ad space that pops in and out.. When level is complete, the ad pops down and stays
+ 
+HP indicators - let's try a circle indicator.. One that both changes color and
+                                has a pie slice  or clock looking chunks removed as the HP
+                                 goes down. The alternate is a mini icon that matches the
+                                  actual ship or space station. This can be done with sprites.
+                                  make sub-images for each percent of the player's HP
+ 
+Research/upgrade buttons: they will light up when reach is complete
+ Research upgrade screen:
+ thinking about a layout like AOE3 where there are icons that bridge out to the right
+ Or rectangles.. But icons are more professional. Also on this screen will be advertising and when a player clicks on the icon, a box to the right has the icon animating.
+  The info box has an alpha'd background to block out what's underneath it. It is a full rectangle going from mid screen top to lowest right screen where the banner ends.
+ 
+Icons:
+ I would like 2 color icons like SWG.
+ Want the iTunes icon to have an angle view and some mini bad guys and the station in the background... The gun in the foreground and some space scene with explosions.
+ 
+story mode - is a book
+ endless - is an infinity symbol - an 8 on its side
+ continue campaign - and arrow pointing to the right side of the same book icon
+ Achievements - a trophy icon with a plaque looking square in the middle
+ Options - a wrench icon
+ Each level - text with the level numbers.. The boss's are mimi pics of the
+                          silhouette of the boss
+ The return - a simple arrow pointing to the left of the screen.
+ The skip - the same arrow above pointing right
+ capitalist - could be coins
+ Strategist - a sword and an axe crossed together
+ Perfectionist – the text "100%"
+ Dualist - two boxes - one with the number "1" the other with number "2"
+                    negative  of the first box
+ 
+Dlc - all the same icons - the icon for it will be the book icon of story mode
+            as a negative.
+ 
+Achievements:
+  Can be be places in the middle of the screen using a transparent background
+ 
+
+Advertising:
+ 
+ad space on title screen, level select and in game.. This game is fast paced so it will be hard to click on Ads while the game is playing... But it will give the user info that they can click on in the options screen or in the title screen.
+     Was also thinking about putting a "touch anywhere to start" screen overlay before each mission... This would save progress and give player time to view ad instead of obstructing game play. See above for upgrade screen banner that will run across the bottom of the screening.
+ 
+Difficulty: to increase difficulty we can add more spawners and more of each
+                      Enemy per level
+
+NEW: POCKET CHANGE -- earn points buy doing stuff.. EPIC!! Put it in here.. maybe earn points by beating levels or getting achivements... need to see examples!!!!!!!
+ 
+
+DLC:
+ the DLC will literally be the neg or inverse of this game. In the DLC, you play the invading aliens.. The player decides which of the 16 spawn points to "launch" a ship from. They can also draw a path for the ship to follow on the more adv ships and use the accelerameter to control the boss ships.
+ Thinking of using a kid of credit system where the player gets standard ships all the time but can purchase more adv ships when he/she takes away hit points from either the ship(less credits) or the station(more credits)
+ Have "coming soon" under the "endless mode" as an option in the main screen. Have the words look locked out but use the inverse colors of the "endless mode" above it. Might use two 'Z' s facing each other and overlapping  in two different colors as game currency... Might be my trade mark.. To use this as a currency in all my games. I want to zoom out a bit and make a graphic for each spawner.. I want them to look like space docks or dry docks or hangers...and I want a que set up for all the higher level ships.. So the common spawn instantly or u can save that spawn time slot to crate a higher level ship.. And each special ship will take longer to spawn then the ones below it
+ 
+DLC story:
+  Those ugly two legged creatures are stealing our salitionia... They shall pay dearly for this.. First we shall strike at the outer stations.. Then we shall take our their heart!!! This is war!
+ 
+Notes for DLC - might give the station, which is now controlled by the computer, 4 defense satelights.. when the player blows up theses.. The can spawn. A boss enemy..
+ 
+Notes for DLC scoring - the player gets a bonus score to getting closer to the station itself not the defense satelights.. There is a base score for launching an enemy and bonus points for distance to the station.. Also there is points for each hit to the station and defense statelights.
+ 
+Todo: watered down GM:Studio version
+ 
+Code missile splash damage - done -
+ Code laser damage - done
+ Hip point marker - going to use multiple damaged sprites
+ Code charged shot - done
+ Code nuke mechanics - done
+ Code multiple bullet types - done
+ Code Overlord controller object - contains all the variables that are needed
+                                                                    to run the game.  -done
+ Code accelerameter controls- done
+ Code turrent respawn
+ Code wave enemy movements - see splash damage test.. Need to take into
+                                                                 account that the spawn point is random
+                                                                - done
+ Code turrent rotating buffer - need to make the turrent slowly turn into a direction like a tank.   - I don't think this is possible.. Will be the very last
+                                                thing I look at. After monoeritization
+ 
+Laser damage code notes:  - done
+  Do not make it a bullet object..
+ 
+Nuke code notes:  - all done
+ make a separate Boss enemy object so that even if a nuke happens, the boss gets little damage.. Makes them more challenging.
+  I also want the nuke button to change color when available and do nothing if not. I was thinking that the nuke button can also serve as a special purpose button. That the button be round instead of sqr and an icon comes up to the special item that can be launched from it.. Similar to the origail clash n slash game.. However, the player purchases the special attack then when it's ready, the icon will change to what u want to launch..nuke is the default, but slow, freeze and possibly repell are also purchased options
+    Update - implemented nuke code need to redraw the sprite myself and the
+                       the other specials. Lastly, need to disable it when not usable.
+    Update - coding special attacks: I can make the enemy movement speed
+                       A global variable and when a slow is set off, the speed is reduced
+                       by 20% and is upgradable... Freeze will set the speed to zero
+                       and repulse will set it to a negative number. Need to work on freeze
+    Update- freeze is done. Need to have an  if statement that checks
+                      if any of the pictured special attack has over 0 quantity, then
+                       set the global variable that allows the special to be used to 1.
+                      This can be done right in the coding of each individual special.
+ 
+Charge shot code notes: - done
+ This will shoot the same bullet sprite with more twice the damage but take a full 3 secs to charge.. want the turrent muzzle to glow hike charging to indicate well that it's still not read
+ 
+Achievements: - 21 achievements
+
+ 1	1 shot, 1 kill  - get 90%+ Accuracy on any level  - an eye icon
+ 2	Untouchable - neither gun nor station get physically collided hard difficulty - finger tip icon                           
+		with a line thru it like ghost busters
+ 3	This is my gun - Full upgrades to turrent - pistol icon   - needs a tracker in the upgrade screen
+ 4	Home sweet home - Full upgrades to station - silhouette of the station(top) - needs a tracker in the upgrade screen
+ 5	It's done - All upgrades - a check mark icon - needs a tracker in the upgrade screen
+ 6	Patch it up - Repaired 50K amount of damage - a band-aid icon - needs a heal tracker int he room0 screen
+ 7	Hit'em hard - dish out  100K damage - a shield with a crack icon - see below - needs a tracker in the room0 screen
+ 8	Shotty - Unlocked shot gun attachment - 6 circles in a 3 dots that spread - needs a tracker in the upgrade screen
+ 9	Eternity - Unlocked perpetual shot attachment - big circle with the infinity sym  - needs a tracker in the upgrade screen
+ 10	Dumb fire - Unlocked missile attachment - a rocket icon	- needs a tracker in the upgrade screen
+ 11	Freak'n laser -Unlocked laser attachment - a line with a splash on a horizontal	- needs a tracker in the upgrade screen
+ 12	Killed ensign boss - silhouette of the enemy icon - when boss dies.. open and save the change to file
+ 13	Killed Advanced LT. boss - silhouette of the enemy icon - when boss dies.. open and save the change to file
+ 14	Killed Super CDR. boss - silhouette of the enemy icon - when boss dies.. open and save the change to file
+ 15	Killed Ultra CAPT. boss - silhouette of the enemy icon - when boss dies.. open and save the change to file
+ 16	Killed Carrier ADM. boss - silhouette of the enemy icon - when boss dies.. open and save the change to file
+ 17	Savior -defened agaisnt all threats - beat all the waves - a crown icon side view - results screen tracker checks the size of room list
+ 18	GOLD FEVER - GET GOLD RATING ON ALL LEVELS - results screen tracker checks both size of the room list and thta all levels have the 3ths star
+ 19	PLATINUM PLAYER - GET PLATINUM RATINGS ON ALL LEVELS - results screen tracker checks both size of the room list and thta all levels have the 3ths star
+ 20	Munitions - Shot 200K OF AMMO - a side view of a pistol bullet icon -needs a shot tracker int he room0 screen
+ 
+ 21	Six figures - obtain a million points in any wave. (rethinking this.. untless its in endless mode)
+ 22	Many 0's - get a billion total score in endless mode( not sure if this is reachable.
+ 
+ 23	Tactician -Survived to 50th wave in endless mode - needs a counter on the endless mode time line.. the same one that increases the spawn rate.
+
+ 24	Money, money - Earned 1 million units  - a Dow jones line graph going up icon ( rethinkinking this) - results screen terra tracker..
+
+	
+
+
+logic:
+7	Hit'em hard - dish out  100K damage - a shield with a crack icon - 2 points for both std and adv enemies.. 4,6,2 for the rest
+			each boss hit counts as an std hit.. so 2
+
+
+STAR AWARDS per level:
+
+			1 beat   -   bronze
+			2 accuary -  silver
+			3 points  -   gold
+			4 hard    -   platinum
+
+
+
+	
+
+i think hard mode sould give out more points.. like 50% more
+ 
+Design the icon for the app store - done - needs art
+ Design the achievements icons and how to unlock them - done - needs art
+ Try to get the space station to take in the bullets shot from
+  The ship/gun and reload it back into the bullet count
+   This simulates not being able to shoot thru the station
+ Code the object that controls the bullets and the enemy types
+    Looking at 1 object that controls most if not all veriables
+ 
+Wish list:
+  How about helpful space phenomia.. like an artificial blackhole or wormhole?
+  This could be done by having the collision step move the enemies and bullets
+        to the center of the black hole then disappear.. should be a move toward
+         and  blackhole's 0,0
+ Maybe a solar flare stuns the invading aliens for a few seconds.
+ 
+
+**************removed for 1st release ******************
+ Note the RTS like building of pods will be removed as of now
+ 
+How about a research / upgrade system... With the xp u get from killing the ships, u can research a tech and then later buy it to in tall into the ship using future currency( credits) so... U just don't get the upgrade, u have to work for it and it becomes persistent like a perk system or an RTS game..
+ Have to design th tech tree which the player should see..maybe even have a way for the player to design a path and have the research go automated from one item to the next..
+ Would like 3 or 4 tech trees... Defense..offense..balanced.. Custom
+ Thinking about giving each station upgrade lab or part it's own  hip points...
+ This might add an other level of complication... Will have to look into this after
+ The upgrade system has been thought out.
+ Im thinking about doing research that is both time based and module based. For example, the player can have up to 4 modules that surround the central core. The core is the command center and power hub for the externally attached research spokes. There is one spoke for living querters. There is one spoke or module for each type of research. Each type also has a different color to help quickly identify what it can research. There are two ways to break this down. The first way is by type meaning one spoke/color only researches defensive attributes, one offensive attributes. The other way to to brake it down is by where the upgrade happens. For example the station upgrades get one module. The ship/turrent get a different one.
+  This way there are only enough slots for one of each type plus one extra or three of one type if the player focuses on one type of attribute only.
+  I'm thinking that when the player kills an enemy, he/she gets a certain amount of credits. In order to get a new spoke, it takes x amount of them. Then research is done which is multiplied by the amount of the same type of spokes the player has built. After the research is complete, then the player can buy that upgrade. This way the money is limited and there is a strategy behind the money management. This also provides more diversity in play and yet another layer of both depth and divergence for the original.
+ 
+final: I will have 4 different upgrade/modes in the story and endless.
+ 
+1 - Capitalist - money based - each hub is double the cost of hubs or pods in the
+       other modes but with each pod, there is a 10% discount added to each
+       Upgrade a max of 3 pods/hubs. Loosing a hub means loosing that
+       discount.
+ 
+2 - Dualist - limited slots for hubs - each pod is either defense or offense and
+         there is only 3 total hubs that can be built. Each upgrade branch is divided
+         into 1/3. All three would be needed to fully build out either defense or
+        offense.  Each pod unlocks the defense and offense for both gun and
+        Station. Losing a hub means no further upgrade on that type.
+        Having all three in 1 type will provide a 10% overall bonus on each stat.
+        Blue is defense and Red is offense.
+ 
+3 - Strategist  - limited slots for hubs each pod is either defense or offense...
+         there is only 3 total hubs that can be built. Each upgrade branch is divided
+         into 1/3. All three wound be needed to fully build out either defense or
+        offense.  Each pod unlocks the defense and offense for either gun or
+        Station. Losing a hub means no further upgrade on that type.
+       Having all three in 1 type will provide a 10% overall bonus on each stat.
+        Red is gun offense.  Yellow is base offense. Green is gun defense.
+         Blue is station defense.
+ 
+4 - Perfectionist - 4 total hubs. Each hub has a specific location and color
+         around the central hub. 1 pod for defense and 1 for offense for gun and for
+         Station. Red, Green, Blue, Yellow. Each can unlock the max tree.
+         Losing a hub means no further upgrade on that type.
+         Having all four in  will provide a 5% overall bonus on all stats.
+ 
+Removed achievements:
+ 
+Endless Perfectionist - reach wave 50 with all four colors of pods - 4
+                                               sections of the infinity sym
+ Total perfectionist - complete story mode in perfectionist -  the book icon
+                                          a check mark in the middle between both pages
+  Endless dualist - reach wave 50 at least 1 defense and 1 offense -
+                                     infinity sym in two boxes the right is the negative of left
+ Bipolar - complete story mode in Dualist - book icon - 2 boxes - right neg.
+ Sun Tzu - reach wave 50 in endless Strategist - a scroll icon with infinity sym
+ Complete Strategist - complete story mode in Strategist -  a book icon with
+                                            chess knight in the middle
+ Entrepreneur - reach wave 50 in endless capitalist. - a pie chart with an
+                              Infinity sym in the middle
+ Tycoon - complete story mode in capitalist - a book icon with a light bulb icon
+ 
+An example upgrade system...the game HORAD
+ Here as u level, you get to pick one of 4 attributes to level, speed, damage,
+    Carry, armory, damage, xxxx,
+ 
+**************removed for 1st release ******************
+ 
+
+Menu art style notes:
+ 
+ I think it would be cool to incorporate the video screens in the load screens of. ME3 into the games menu..l the 2 color holographic style wi glory edges..
+ And have the bar of the refreshing screen be thick and go down the screen as an overlay..  This might make all the icons into 2 color holograms.. Also make it easier to draw!
+  Tried this in two different backgrounds.. 1 was solid black no alpha.. Looked ok when connected to each other but lacked something.. The other was soild boarder with 0% alpha at the center.. This made the game look like I was playing on a glass surface.. Perfect!
+ 
+
+Art to do list:
+ 
+normal -
+ Advanced -
+ Super -
+ Ultra -
+ Mini carrier -
+ Space station -
+ Boss -
+ Turret -
+ Enemy missile -
+ Normal shot - done
+ Missile- redo
+ Perpetual shot - redo
+ Laser - 0%
+ Meteor - done - smaller version of the asteroids - redo
+ Asteroid - done - have 3 types that can range in size and start frame
+ General Buttons - 0%
+ Space mine - 0%
+ Comet - done
+ Planets - 20% - I wanna redo the planets
+ Star fields - 0%
+ Menu backgrounds- 0% - maybe a slide-show of different action shots
+ Explosions - 90% - it's modeled... Wish there was more color variation
+ Blackhole -0%
+ Meteor shower backgrounds - 0%
+ life marker - 50% - moist re do this.. Like the Disney picture I downloaded of
+                          the reimanged test track ride.. A circle with smaller sections
+                            around it. - using the spirite and color change instead.
+ Achievement icons - 0%
+ Pause menu icons-0%
+ Options menu icons -0%
+ GUI buttons -0%
+ Start menu ions -0%
+ Upgrade/Store icons -0%
+ Level buttons - 6 states- locked,unlocked, bronze,silver,gold,platinum stars
+ font - 100% done.. Will use the one in game now.
+ 
+Moniterization:
+ Give the player some ore for sharing the game on FB, twitter, pint rest.
+ Give the player some ore for playing 10 times..etc
+ Give some ore for Turing the game on after x days of play.. Will not use
+             phone/tab date.. Will have a count in the save game area..
+ 
+
+
+
+Following is notes taken fromt he GM:S game info screen whcih reached its limit:
+
+
+the spread shot looks more like a fire then spread... need to have a dealy between shots
+update: whats missing is global.SpredShootRate.. i want to take the difference betten normal shot rate and the sprad shot rate.. and add it the the alarm
+fixed: found that the initnal speed of the special shots where too fast.. slowed them all down and corrected a bug on any other shoit but normal haivng a decay
+
+copy the DLC code to load the avaiable total Terras and then add the purchased amount then re-save to file for each of th
+      bank's buttons -DONE
+
+ the high score is something else tho.. not sure what causes the bogus data. Idea. . How about I make all 50 levels with score 0 right off the bat.. then have a check to see if the level stored high score is greater then the current.. if so.. nothing happens. . If not..store the new score.. it does show 0s but that also means that something goes there.. will show the player that something needs to go therr.... hmmm
+Run thru every aspect of the game again.. it should be close to release able .. also test out the ads demo on the fone.
+
+work on the boss's hitpoints... thinking about 100 for the STD -done
+NO space objects -  need to add the asterioids, commets and the like to the timelines of the levels
+fixed!
+
+list of space objs:
+astroids-orbit
+astroid attack
+comet
+
+
+STD boss  - ast orbit
+ADV boss - ast attack
+Super boss - ast orbit and attack
+Ultra Boss - commet and  ast orbit
+Carrier boss - comet  and ast attack
+mothership - all three
+
+
+
+the spreadshot shooting speed it tooo fast!
+fixed lowered to 10 and loswered perpetial to 8
+
+
+
+mosther ship missile - needs collison with turrent sheild and spaestation shield 
+ UPDATE: STILL HAVING COLLION ISSUES WIHT THE TURRENT AT NO SHIELDS.. NOT SURE Y
+fixed: was using step twards insetad of move to
+
+
+station freeze attactk - not work on enemies -- look into!!
+FIX - ADDED COLLIIONS AND CANMOVES TO THE ENEMIES.. ALSO.. SONE A STEPTWORD IS STARTED.. ONLY WAY TO STOP
+        IT IS WITH A STEPTOWARD AT SPEED 0
+
+
+level complete - looks like the spawned eneies gets past the needed reuiemrnet and the level keeps spawning and not even closing ou
+FIXED: set the end to be the number of spawned enies.. so it can be more it can be less.. but will alwyas complete
+
+
+spawing - when respawning.. the play's shot/clip size/ reload are nto reset.. needs to reset 
+fixed: fixed this -workign now
+
+level loading - somethimes the level will nto reset.. all the old data is still there.. need to figurte out a way to force the reset..
+fixed: moved the level needed info to the obj12 create event.. now it get reset when its created
+
+station explosion - chucks -done
+turrent exposion - chunnkcs  - not needed
+make the spawn oribail code -done
+make the spawn comment code -done
+make the spawn missle code -done
+
+
+update the time lines with the other space hazzards!! -done
+
+BUG: mission complete.. check the work on timelien one.. 74 units spawn even though i reqwuwsatoed only 70 needed to beat.. made it 75 and still
+           once the spawned enimed = the killed enemies.. the mission completes.. need to refence back to how many are needed!!!
+	update: added a goto timeline 150 at the next to last entry.. this way.. the timeline will loop infinetly until the boss is killed..
+                          needs two things.. 1 like endles.. enemy requireed must be liek 10 billion  2 - the bosses set the level beat to 1.. no fails (the last
+	                entry on non-boss levels)
+	update: this is corrected.. the boss's death now ends the level!!
+
+
+
+JOYSTICK. logic: mayeb the game would be ezr if the turrent would go from spawn point to spawn point like the accobj does..
+  so basicly the circle is cut up into 16 points.. the turnent moves slowly from point to point until it reaches the nearest shoot point!
+   the barrel can still turn in any direction.. just the base movement will be this way... this might help witht  the 0/360 issue.. where 
+  the turrent moves crazy qucik to when goig thru the rigth side.. also.. it might make the game ezr since the player does not have to have
+  a perfect aim in order to hit.. hmmm
+update: its fine.. i got it to stop bouncing.. but it does what its supposed to do.. get the turrent over to the stop asap
+
+
+
+The achivemt screen is not working correctly.. after a few swipes.. the frog shows up.. need to check for background 7  
+update: fixed the background.. need to make sure that the screnn don't start shifted!!!
+Update: fixed the shifting by reworkign the swip logic.. delete the originals.
+FIXED:  was a comple error.. working 100% now!
+
+ 
+
+BUG: the accellerotemter is nto moving down.. the code is in the game controler under the loading of options form file.. its currently at
+	-0.77   ... this number might be too small.. 1st try changing it to -.9... then +.77, then +.9  lastly.. look at the calcs... see if I can
+	make a more significat number difference with the slider...
+	Update: setting it to -0.9 helps with the aiming.. but the config screen does not update corectly.. setiing the slider all top makes
+		  the acc move correctly.. setting it to down.. stops the movement all together...
+	Update: the acc is working perfectly.. what is not working is the turrent movign following the acc dot!! needs more research!!!
+	from the net: angle = point_direction(object12.x,object12.y,device_get_tilt_x(), device_get_tilt_y());
+	update: i set something to poll the data formt he accell in the orbit with mouse and now it works.. need to 1 - only poll the data 
+			when its needed and 2 - fix the oritation.. the turrnet niether ortates nor shoots to the right angle (nossle/muzle)
+
+	update: now points wot where the accell obj was.. it lags the actuall accell by a degree or more.. maybe i can hot have the accell
+ 	 	  obj visible and then the only thing that u use is the muzzle of the turrent to aim?.. need to update the buffer..
+		  there is too much twitch..  also y can't i use this same rotation method for the damm virtual stick??? 
+	FIXED: ACCELL NOW WORKING - AND ONLY POLLS DATA WHEN SET TO ACCELL CONTROL TYPE
+
+
+BUG: high score not writing!
+	fixed: wasn't saving.. then wasn't polling.. got both to work correctly!!
+
+
+the collions on the station and enemeies - changed the move of the all enemy form step to normal jump.. worked.
+the collions on the turrent and the enemies - changed the move of the all enemy form step to normal jump.. worked.
+
+
+The virtual joy is acting up.. need to have something check for both fingers before firing.. that and in the touch controls..
+Might need to have a bigger joy back... and futher in start point
+
+uodate: made a larger joyback.. works perfect.. however.. need to have a check for both buttons maybe.. need to seperarte the fire button from
+	the chrage button.. looks like we get over lap and its chargign the butlllet and not .. glicthing up!!
+	update: i moved the fare 30 pics away.. no conflicts.. but the game stops shooting again!!! need to figure out wat it is!!!
+	fixed: i am markign this fixed see the Major bug!
+
+FB = need to have the FB init before posting... hmmm maybe a delay!
+fixed: added a post only if autherized to be in FB!
+
+The save is not working.. needs to add the terras even if the player looses the level
+ fixed!!
+
+
+level select - its making millions of stars and they are all int he same x,y location 
+
+BUG: the NUKE is broken yet again!! - fixed again.. added all final enemy types!!
+
+BUG: the virtual joystick is now wokring.. it maybe that i am referencing the wrong angles.. it migth be the current angle is the problem
+ 	its still usign the mouse as input to the orbit angle (target angle)...
+           FIX: i was right.. set two special cases for botth the virtual and the accel controls.. now need to tweek the speeds 80)
+
+found a bug that if u put the turrent to soild.. the eneimes do not collide with it!! Thsi however makes the turrent roll smoother in circles..
+so its optimal to have it soild.. just got to figure out how to get everything else to collide with it!!!
+FIXED! found that the eneimes sprites were touching the actual turrent and stopping before they touched the sheild... made the sheild sprite
+            big and now the enimies touch the shiled before the turrent!!
+
+
+
+BUG: chanign into and thru the main menu.. movign to the start screen from the pauased screen or even from the start screen
+	to the continue button on the start screen caused a hard crash..
+	im startiugn with the enemies on screen.. seems that if u hit the pause and start buttons at the start of the level,
+            its less likey to crash! .. the STD seamed fine.. the ultra seamed to aheva prob.. the carrier alos looks good.
+	FIXED: i added a check to make sure that isPuased gloabl is set to 0
+
+BUG:  the directional enemies do not pop if they are a part of a squad.. that has changed the color or placed a path on it...
+ update - found that the path is the issue.. once the path ends.. it goses normall.. this could be because there is both
+    a step to and a path placed on the sqd ships.. must do more research..
+ Update - i tried settign the spawner to make a moving insatcne.. that didn't help.. i think the problem is int he step event, there is a step toward the center..
+	   I thinkt thats overriding the path,, and now the ultras don't even move.. so I have to find a way to set them in motion!
+
+spawers:
+ 
+1 LL
+2 LL
+3 Bottom
+4 LR
+5 LR
+6 LR
+7 Right
+8 TR
+9 TR
+10 TR
+ 11 Top
+12 TL
+13 TL
+14 TL
+15 Left
+16 LL
+  FIXED:  i set a check with the swapner number to set the path and once it ends.. just have them go rigth for the station.. better at faster speeds.
+
+BUG:  laser nto setting canshoot back to 1; it is but only if the button is not held.. and then it does but it done't shoot!!
+	UPDATE: found that the laster having its own delay stacked onto the regular delay and just keept delaying it..
+                  FIX: made the delays uniform and fixed the reload animation to match new dual delay system!  saw some weird
+                          issues with the laser.. need to see if I can lock it down... would be awsome to make the laser some how check
+	              if its at the same angle of the turrent before firing! WORK ON THIS NEXT!!!
+	FIXED: removed the calcs and just set laser beam to jump to the x & y of the orbit with mosue obj!!! simple fix!
+
+
+BUG: the menu buttons do not work! in the running nor in the complied exe in windows.. however... it does work on the fone!!
+	FIXED:  some how.. it fixed itself... now i can contiune to work on making a better start screen!!!!!
+	UPDATE: the fix was simple.. the screen resolution is off.. all screens MUST be 800 x 600 or all the points will be off
+
+
+
+BUG: found a bug that would spawn more then 1 accellobj..
+	FIXED:  i changed the step event of the orbiitwithmouse obj to spawn one if needed and there is none avaiable
+
+
+BUG: found that the fireing point does not move correctly with the mouse.. might not move correctly with the accelerometer either..
+ it moves fine with the virtual joystick but does not move at all when not using the virtual stick.. this has somehting to do with
+ the global.degree virable.. both the firebutton and the oribitwithmouse have an global.degree setting in them.. this might be a
+ clue.
+ update- fixed it some what.. the firing point is slower or faster at times depending on the mouse movement in reference to the turrent.
+   there must be somthing in the fire button and the oribit with mouse im missing... needs further study
+ FIXED-  set both direction shot and the degree to the center and the mouse angle.. same number.. same turning!!!!
+
+
+
+
+BUG: the bullets already shot would get a smoke trail if the player switched to missles....
+ FIXED-  i made a local vasible SmokeTrail that set to 1 would make the trail.. fixed issue. also set the destory self to only when the smoke    attribiute is on on the bullet.
+
+BUG: fixed the shootign delay after switching out of the laser.. 
+ FIXED - fixed with a set of logic at the step of the orbitwithmouse
+
+BUG:  Nuke special is broken again - have to make sure I change the enemeies obj names that are counted like last time!
+  
+ BUG: If i remove all the buttons and the virtual joystick, the game crashes... look below for the error
+ FIXED - changed teh create of the bullet obj to check if there was a chargeshot button
+
+BUG: the game does not stay paued if the player switches to another room... let me see if there is a way to carry what ever actually pauses
+ the game over.. maybe as a global or something...
+ UPDATE-  possible fix could be to do what the pause button is doing.. when u hit either the options or achives button, there is a
+        2nd deactivate all done and a "Fake" room is created still in this same room that creates the options screen obj 
+         and runs all its code.. when u hit back, it should go back to the puause menu by checking if there is an isnatce of it..
+         this is what will speretae the "fake" screen from the real one.. the check for the pause menu.
+ UPDATE- I fixed the Options screen formt he pasued menu bug.. I found a new problem wth the configure joystick button.
+        I think that a check has to be made after the puase button is hit again to resume play to check if there is left over objects
+        so they can be destoryed or if the pause menu even exisits..
+ UPDATE- I ficed both the Options screen and the virtual joystick back.. everything is working now.. all options implimented.
+ FIXED: made the screens that link to the options screen generate in code.. thus is all still the 1st page and can contiune
+  where the player left off!
+
+BUG: found a bug that has no real reason.. the STD enemy obj was not acting like the duplicate ADV emeny when I used the STOP special..
+ FIXED: I deleted it and re made it.. I also sitched from create moving instance to create instance and it works now. 
+ Mini update: the Supoer emeies that are not given a path, act like the STDs used to on the STOP special.. needs to be fixed
+          update: deleted and re-created each enemy.. they all stop correctly now..
+ 
+
+BUG: there is an issue with the collision check usign the distance tot he station... it gives a false it when the obj appaers on the screen
+ but does not remove the obj.. it gives a neg score and drops the mutliplier!
+ FIXED: i moved the distance check right to the begin step even below the line that set the distance and it fixed the issue!!!
+
+
+BUG: the score does not reset when goign to a new or reting the current level! 
+ FIXED: I now have the score set to 0 before going back into room0
+
+
+
+BUG: the game crashes ont he runner if I hit a level on the level sect screen.. it seems to crash on the verify u want to play this level.. CRITICAL!!!
+           FIXED: looks liek an update fixed this.. even better.. i removed the confirm level obj all togther!!
+
+BUG: if the player chooses no when asked if he wants to play this level in the level select screen, it resets the swipelimit to the edge of that sceen 
+ where the level is... the player can not swipe back to earlier levels!!!!!!!!
+ FIXED: removed the level confirm object that was casuing the glitch..!!! now the level will be displayed to the player after touching.
+
+
+BUG: Accuracy was offf
+ FIXED: had to set the if limiter to greater than or equil to 1.. that fixed it!!!
+  
+
+BUG:  found an issue with GM:S that did not want to add the level and the total terras.. fixed it in the alarm0 the end in code just before saving to 
+ file.. the comp calculates the addition and the saves it to file.
+
+BUG: The acceleromter does not work! LOOK INTO!!!
+ FIXED: the command to poll the accelerometer changed.. i updated it in the main game controller and its now working!! 80)
+
+
+  BUG: sometimes when the turrent re-spawns.. can_fire gloabl never sets back to 1...CRITICAL!
+POSSSIBLE FIX: I placed an can fire to 1 or 0 in the station that spawns the turrent event... so far it appears to be working!!!!!
+
+
+BUG: found that if you switch from left to rigth hand, the vitual joystick does not work! CRITICAL!!!
+	idea: the idea is to destory the turrent and then re-spawn it when the player switches control styles.. I checked not having a turrnet
+		does NOT crash the game...  note.. now witht he below fix, the turrent does turn to where it needs to go.. just does not move there!!!
+	update: detraoying an crateing an new turrent did not help..
+	Idea2: found that when the game is paused.. and then unpaused without doign anything else, the movement of the vitrual joy crashes
+		this means that it has nothiogn to do with chnaging control types.. rather there is soemthing int he unpause event that caused the
+		issue/bug... needs to be investigated further!!
+	update: its nto the deactivating thats causign the issue... these are wild guesses but migh be soemthign with the option screen buttion??
+		  not sure what else would cause it.. the touch screen one work awsome..  even deactiiving it... cousl it be deactivign the virtual
+		  joystick?????????????
+	update: its not the virtal joy back or the virtual joy stick either... im running out out options here... not good... next up.. the logic that 
+		   removes the virtual joy stick when not needed.. this is really unllikey... aslo.. out of all the control types.. the virtual jocystick
+		   is the only one that depends on an other object.. this is the only clue I have so far....
+	Idea3: I am goign to try an trick it... at the pause screen, if the control type is virtual joy, set the control type to 1 for about 1 tick then
+		using an alarm set it back to control type 0.. this will imitate the way the bug is cleared by setting the control to a different type
+		then setting it back to virtual  joy.. hope this works (prays to GOD it does.. PLEASE LORD!!! LET THIS WORK!)
+	FIXED: it took an alarm to make it work.. had to be atleast a sec as control type 3 then back to 0.. the above worked!!!back in biz!!!
+
+BUG: found that charge shot does nto always line up with the turrent's mussle.
+	touch control seams to be perfect.. so i need to get the virtual joy stick control to act more like the touch control...
+ FIXED: moved the set direction to the virtual joystick if touched event logic so the last degree is what the urrent stays at!!!! WOOT!!!
+
+
+BUG: not loading what was purchased... foudn that it does write the file and loads it.. it does not set it to the defualt values if there is a vaule in the file
+	foudn that it also does the calulation.. but some how its not geting written correctly or at all.. not sure where the break down is..
+ 	my next idea is to break the string into 3 different strings.. 1-11, 12-21, 22-34  see if its just teh sheeer size.. becuase the level list loads fine..
+	cus its like 7 things long.. looks liek i might have to test all the way to 50... there might be an issue there..
+	FIXED: turns out it was two fold.. one.. in the alarm11(now 1) i had to exit the event after each if statment.. then it was a timing issue..
+		  the game wrote the code in one sec or cycle.. needed to give it some time so i set up alarm2 to write the code only after the	
+		  modification had been done to the global varible... aslo need to add "ceil( )" to any varible that arrents it... seee the missle clip upgrade!!!
+
+
+BUG: when the stationHP global reaches between 900-600, the image goes back to the full perfect health!
+	image_index=floor((10*frac(global.StationHP/global.StationMaxHP)));
+FIXED: i placed a check in object12 if the stationHPs are 10% of the max stationHPs then set the image to 1(which over-rides the settign back to 0)
+
+
+
+Upgrade screen: Here.. i have to figure out the number of catgories that are needed.. a swipe might be required.. I want to do this old school..
+ meaning.. i make a fx and code each button sparetely.. need to keep the difficulty down to makre sure i can finish
+ also.. have to work on the defense cannons.. freeze and domino... that can just be a random bullet spawned bu the 
+ station that freezes or spawns more bullets...
+ UPDATE:  I want to have all 5 options ont he screen at once..so its shows 5 upgrades and 1/4 of the next one
+ plus a note to swipe on the bottom ..I think the top row should move and the option upgrade
+ stay perminate or disappare only to be spawned from the top row option picked... want a nice fx.. 
+ something quick and generic.. so it doesn't matter what top row option is picked..
+ the fx is still the same..
+
+ upgrade options coords:
+
+ 1 40,240
+ 2 180,240
+ 3 320,240
+ 4 460,240
+ 5 600,240
+
+ the catagoriy coords are:
+
+ 1 40,80
+ 2 180,80
+ 3 320,80
+ 4 460,80
+ 5 600,80
+
+ UPDATE: I get teh main animation and the spirte style i want.. also got the spawning together as animation.. the limiter works
+       but it may be too limiting.. i have to figure out how to send an atrribute to the back OBJs.. perhaps as a global varible..
+       so to get the next upgrade.. u can have the clicked catagory check the global variable.. if its different.. destory the
+                                          back objs and make the new ones with the correct attribs , text and pricing information (in draw event!).
+       I also need a way to go back to the screen that brogt us here and the screen obj to spawn the catagories so I can
+      use it in the paused menu or not.. maybe we can only upgrade after a mission is done.. I like that makes it simple..
+        NO upgrading while paused.. this screen is only reachable from the start, mission select(?) and results screen!!!
+ UPDATE: i have an idea for moving the backs left and rigth with the swips.. set every one to a global varible as  start value.
+                                          since they are all like 140 over.. the first catagoriey is global.upgradeXloc+40; then global.upgradeXloc+180..
+       this needs to be worked on.. might have to be multiplied..
+ the swipe calcs:  = (-140*uppgradeXloc+40) for the 1st catigory ... = (-140*uppgradeXloc+180) for the 2nd  etc...
+          so in this case.. the follower just follows and can use the global to put its position on the screen.. and the swipe
+ just registers swipes..
+
+ UPDATE: added the follower obj.. added the swipe code in.. need to limit the movement to 0.. but for now I can see all the movement
+ so it set to 6 and -6... need to add in all the upgrades to determine how many swipes are needed to reach the end.
+ also, added a blue tint to for the station upgrades.. the turrent upgraddes can stay green.. added animation randomness
+ so that each time an upgrade is clicked, the options spawn differently. added a destroy after a swipe to clear the screen 
+  and a detroy before spawning new options.. aslo added a global varible that can be used on the options to check
+ what catagory they are attached to.. need to set up another list that pulls in at the main game controller obj - like the money, achivements and money lists from file to determine what upgrades are already purchased and what is now unlocked to
+ purchase!
+ UPDATE: 5 swipes are needed to see all the cataigories - i upgraded the follower to look better and removed the 0 set to self.x = 20
+ UPDATE: i have added a color for text and the fx to indicate its locked.. i also made more then one back to make coding
+ of each option and unlocking them easier!
+ UPDATE: I have made the global variabled for the upgrade cost and values.. these two will have to stored in the list..
+ they can aslo be used to check if the things are locked or not.. not sure.. but right now each of the options has its own 
+ upgrade info that can be changed to match what upgrade th eplayer chooses.. this is better then making the same 
+ coding the achiment back thing.. 
+
+
+ UPDATE: Logic:
+dsb100sa100 Upgrade screen update: we have three global variables.. 
+ global.upgrade selected - changes from 1 - 23 
+ global.optionValue: this a text example +10% 
+ global.optionCost: number. In Terras 
+ So on the list .. We need to have the upgrade number 1 -23 and then the option value unlocked.. So it's like.. 
+ 10 - 2 This is the tenth upgrade and the 1st upgrade was purchased.. The 2nd is the next availed and the 3rd to the  5th is still locked. 
+ So it's a list pos 1 to 23 and the value from 0 to 6. Meaning 0 totally locked  and 6 meaning completely unlocked. 
+ Then its less then the value in the dlist.. So 5 and under for say 6... Which is all options..
+ Update: im going to use global.UpgradeCats as the list name
+ UPDATE: got some check in there.. its not reallt working well.. like tis skipping over the inbetween numbers.. maybe it should be x or less
+ that did not work... have to try somehtign else...
+d
+ UPDATE: I fixed the options not being selectable when they should and the error with the 1st option being always selectable.
+ I noticed that the colors are off.. when they options are locked.. they look unlocked and vica versa on some options..
+ need to look into this.. i think it has to do with where I place my color info
+
+ UPDATE: found a bug in GM that was affecting option2.. i nuked it and duplicated option5.. aslo.. created a locked color variation
+  to the font.. option3 is set up.. changed the level select, achivement to match this locked/unlocked color.
+      I still have to fix the step even in the achivement back.. i have to get rid of the font1/font code 
+
+ UPDATE: I rememebred that I have to add the special attacks.. I want ot give 1 free unit when u by the speical .. but i want to sell
+ the additial units for xx terras.... the same thing as the shot attachement upgrades.. just with a buy and an
+ non-locking or continuos stream of eterially puchaseable units for the specials..
+
+ UPDATE: I inserted the special attacks between the shot upgrades and the turrent upgrades.. they lock and unloack, and color
+       correctly now.. they also move correctly.. need to fix the limter not to allow swippign to the left on the 1st screen
+       and need to do the calculations for the puchases!!! 80)
+
+ UPDATE: i have the upgrades to the special attacks now.. the one thing i have to do is some how have a check to see if special
+ attack has reached its limit of 3.. then disable the option to buy a new unit.
+
+ UPDATE: i have added a check for the amount of 3 units on any of the specials and then made a code to display how many of
+       each the player has and its limit with one hardcoded line!! 80).. now its on to the charging or cashieer logic!
+ 
+  Cashier: loaded the total terras on the create screen code.. found an issue witht he results screens text display.. its too long.. need to
+      be moved further in.. (fix required!)
+ Cashier: I think i will use the existing draw screen to set the OptionModifer  and OptionModifierCost  vairable to the correct one.. then I need two  checks.. the 1st is to see if the player has already unlocked the option (if yes then do nothing) else check if the cost of the 
+ less then or equil to the global total scrap.. (if yess) then the player buys the option if not ask if they want to visit the bank
+ to purchase more terras..
+
+ Cashiier: I updated all of option1 .. now I have to do the same for the rest.. the cost / modifere are messed up since it displays the last one..
+      I think have have to move it to the left click event... lets try it thsi way first and see what happends.. the cost and modifer are updateign  correctly.. but it may keep the last one there.. need to verify this.. that i i want to try it like option1 .. where its int he draw event..
+     update: it is workign correctly.. I put in a check on the left click that compairs the total scrap to the cost of the uprade.. 
+  now i need to figure out a verify dialog box and the actual charging actions.. It would probly bee good to display the total
+ terras the player has earned in the screen.. even ont he swipe part is fine.
+ Update: found an issue with usign a global to set the cost of the upgrade. as i suspected.. some how the pc uses the hightest
+   value or last value for the global.  the work around seams to be to make this a local varible as in option2 the frist 2 or 3..
+ this worked when I changed tje value from 20k to 2k then back again.. the gloable was usign 45k and lockign out the wrong
+
+update: fixed the remaining 4 options to match option2 by removign the global... now all i need is to update optiosn 3 to 5 with thier correct values.
+	opitin3 is now done...
+
+UPDATE: all of the options are now done.. i have triple checked each option for each upgrade for cost and modifier..
+ 
+
+LOGIC update:
+
+ then I need two  checks.. the 1st is to see if the player has already unlocked the option (if yes then do nothing) (done)
+ else check if the cost of the  less then or equil to the global total scrap..  (done already)
+(if yess) then the player buys the option 
+if not  display the difference and then ask if they want to visit the bank to purchase more terras..(done) (needs two buttons a bank and a no)
+ 
+ 
+Logic update: I made the ask for bank pop up lock out every thing else... no swipping no clicking anything else until the pop is addressed.
+    
+	vairiables need to write the change into the save file:
+	global.UpgradeSelected = 1to 27
+	global.optionUnlocked = real(ds_list_find_value(global.UpgradeCats, global.UpgradeSelected))
+
+update: got it to almost work.. u can keep buying the option u have just bought if u don;t swipe.. swipung seams to nullify whatever is casuign this.
+update: i got the purchasign down.. foudn 1 issue.. the special attacks.. u need to buy a unit to upgrade the options 3 to 5 and if u by a unit again,
+	   then i undoes the upgrades 3 to 5 again liek it was the 1st time!!! - this is with catagoies 24-26 only.. 27 is fine.
+	  also.. would like the catagories to state when all the optiosn have been purchased!! 80) - done
+
+
+UPDATE: fixed a bug that would not update the code.. then I applied the updating logic and write to file to optiosn 3 to 5... this page is DONE!!!!!!
+
+
+
+In app purchase screen: I have the bank store now correctly workign if there are not enough terras to buy an upgrade.. it goes back to almost the same
+				spot aswell.. now i need to get the in app purchaseing working.
+
+
+
+
+*************************************************************************************
+
+coding to work on:
+
+acceletromter: verify its working.
+IOS - Intergation
+In-app pruches - have to submit my game first, then work on the code
+Andios game stion - intertation
+
+
+ 
+Completed code to work on:
+
+achivemtns: - all done!!! endless mode tracker / unlocker is in the endlessmode obj
+
+    hit em hard - image_index=floor(ChargeFireButton.timeCharged); (in create event of bullet obj) ... i can check the index when
+		the bullet hits an enemy. and use it to multiplay the damage value agaisnt!! same of rthe missle and the laser..
+		each can have its own multiplier!! 80)
+		UPDATE:  applied the code to the rest of the enemies... need to test each one now.. this is almost done 80)
+
+BUG:	hit em hard is not usign the if statement correctly... the result screen obj is thus unlocking an avicement each time!!
+	fixed.. found that the explosion obj was also removing -1 from it so it was not -1... removed now only the player can earn this achiv
+	FIXED.. looks like the comment being before the bracket cuased isses!!
+
+UPDATE BROKE THE GAME AGAIN!!!  -  
+	the adv enime normal shot is not working. standard enemiy normal shot is not working.. missle and perptual are working for both!
+	FIXED: i commented out the hitemhard change to test and forgot to uncomment... corrected!!
+		   ALL enemies are wortking now with everythgin but the laser.. LASER is next!!	
+
+
+platium player -  im thinking about another list here..  
+
+	       check the patimun list.. is the game level on the list? no - add it to the list usign its room number as an index value
+								             yes - then skip
+                    in results screen obj  - check size of patium list.. is it 50 or over large? yes - unlock the achivement
+	UPDATE: done.. used a list in the game controller to create all the levels and a check at the results to see if that level was already awarded
+
+
+
+  shield for the station - - done 100% 
+repair for the station -- DONE 100%
+   shield for the turrent - done 100% 
+repair for the turrent - DONE 100%
+freeze bullet.. launcher coded.. missign enemy interaction- fixed bug.. added a CanMove varible which the bullet truns off... DONE 100%
+		 (this will have a collison event inside each enemiy to stop it for a few secs in an alarm event set it back to normal)
+station nuke .. similar to the turrent's nuke nust with a bigger blast radius. - coded... need to figure out how to get the missle to point correctly
+		 maybe usign the able created by where its created and the 0 point on the circle... also need to get a bigger blast radius and missle
+		 body!!! - i fixed the direction but the collison is giving hell again!!! the explosion is not cuasing others to explode!!!
+		UPDATE: found the best way to do collions.. check the STEP event of the explosion obj.. this is now fixed.. have to add the points
+			       for each type of enemy exploded!! ( i removed the big explosion.. i think it helped too much.. now the turrent explosiong should
+			      also blow up enemies!! done 100% even set the ST shootign to much much slower!!
+
+astorids - they will slowly circle the station.. +1 to the angle.. once it reaches 360, then start adding +1 to the speed.. it shhould slowly move in circules
+	     when they are hit once.. they spawn 3 smaller astroids at 4 random placements(with the choose command (dice))
+	   astorids - they will slowly circle the station.. +1 to the angle.. once it reaches 360, then start adding +1 to the speed.. it shhould slowly move in   
+
+ circules when they are hit once.. they spawn 3 smaller astroids at 4 random placements(with the choose command (dice))
+		blowing up the big asteroid does not gicve u scarps.. only the lil ones 20 terras each
+		im making 2 types of asteroids.. one that is sent to hit the station and one that orbits
+		the station blocking shots like aphysical force sheild 
+
+			global.AsteriodAttack   -100% done
+			global.AsteroidOribt	  - 100%  done 
+
+commet - these are the astroid spirtes smaller with a ligth blue tint and a partile tail.. only the comemt itself will do damage to the player... these shot
+	     up, down, and at angles in pairs of 4 at random placements.. slow moving.. 
+	      logic.. this might be interesting... how about the commet(which is ice) prevents the player from moving both the turrent and the oribit
+		     around the station.. hmmmmmmmmmmmmmmmmmmmm - 100% done... the freeze works.. even if the station is hit.. the turrent
+		is frozen for like 4 secs.. does not compond!!!
+
+Final Start screen with working buttons -words on the droid not well on windows..
+Accellerametoer correction - not sure y its no longer working - its kindaa working.. needs to figure out y it don't keep the last setting and 
+				 y the accell obj in the options menu does not move correctly..
+	update - i tried serval ways to get it to work but now it seams even the sprite is not drawing.. and idea came to me about using
+		   only one of the two axis to manipulate the degree inside the acc obj.. this way the forumula is simple...
+      	               now it might have to be a delta change instead of a stright maipulation.. need tests...
+	update - set it now to use the up/down to change the angle.. prob... if its not perfectly still.. the acc obj spins like a washing machine!!!
+		   needs to have something to check the value of the tilt... if its over x number then +1 to the angle.. if its under x value + -1 to the angle!!!
+	update - i got it to go with angles.. just seams to be hard to get the acc obj to go ina  complete circle... im thinking about making zones
+		   where the specifc tilt acts on the  angle only... maybe set the angle back to 0 when it reaches 359..
+	update - the angle is in radians... so i have to make it reset and check for the angle in rads not degrees...
+	UPDATE- changed to rads.. and then had the thign rest after -6.28 or + 6.28.. aslo set the change higher to .4 instead of .1 and am only using
+  		      the up and down movement to chaneg the angle.. seams to be more useful.  --- DONE!!!
+
+Options screen - need to fix this to remove the acc portion since its no longer needed.. i like to make the two lower buttions bigger and make the
+	                  sound and music buttons wider!! with a nice space bettween them!!
+	UPDATE: fixed the screen layout .. now i found that there is an issue with both the config virt joy and the options pausedback buttons...
+		       not sure whats up...
+	UPDATE: fixed the config virt and the pauseback.. also fixed the reset.. everythign is back to the way it was before..100% working!
+
+Fix the results screen - fixed!
+ sound/music volume - fixed it.. 
+
+code the achivements - i will use a tracker for these.. for example the station.. every time the player buys a Option5, it takes away 1 from the global
+                 			    station upgrade taker.. and if the taker is 0 or less.. then the achiment is unlocked
+
+	logic:  StupgradeTraker = 6;  option5 unlocked , then StupgradeTaker -1; if StupgradeTaker <= 0; then Home,swet home achivement is unlocked and set to 1;
+		update: i fixed most of the ones I have coded... now there is a bug ont he results screen
+
+	BUG: result screen adds +1 to the total unlocked for some reason!!!
+	FIXED!!! was a bug with the decomplier.. deleted and created new includign typing in everythign again!!!
+
+Fix the start page - add the high res sprites of the mothership under the ad, the turrent.. some eneimes..
+
+fix the level select screen- done -  corrected the levelselectback objs
+	update: done!
+
+get the time line equilvalent in real time - so liek 10 mins is 10 mins!!!
+ 	UPDATE: done.. is workign fine!
+		
+code each level's timeline - working on
+	UPDATE: complete!!
+
+pop up achivement notification - 100% done - needs to be tested!
+	update: tested and working!
+
+fix laser - its too damm strong right now - global.directionShot  controlls where the shot goes and how fast... need to see if I can slow this down
+	    when firing the laser!!
+               fixed - needs accelleramoter testing.. all other control types work.. need to set the shot facing to the object12.x/y and the orbitwithmouse.x/y angle .. this makes the
+	   laser move slowly int he same directiona and facing the same angle!!
+	  UPDATE - verified working on accelleramoter and on fone in general.
+
+Spwaners - created alittle better system to sawpn guys by doing a 0-16 check instead of a 1-10 nad >6.. less spawner 1 come out!!
+	update: fixed.. added a radomness to it
+
+
+
+
+
+FB - intergation  - done.. needs to have an instruction that they have to hit the FB icon twice the 1st time.. 
+         note: make a FB account for the game company.. make a new app in the devepopers page witht the same name as the game
+	      copy the app key form the FB site into the global game settigns in GM and copy the android hash from the gm preferences to
+	      the FB site.. leave all else default and blank!
+   https://developers.facebook.com/apps
+
+the level beat time line ---- -  ADDED BOTH A COMPLEYE AND A FAILED POP UP!!! THE FAIL IS DONE USEING ONLY THE TIMELINE
+
+In a game, time is split into steps and the steps are defined by the room speed, which is the number of steps that the game has to complete per second. The default is 30, so the game completes 30 steps in every second of real time. So, the alarm is calculated in steps and we want it to run every two seconds, so there we should have a value of 60 (two times the current room speed). 
+so doing the math =  30 steps / 1 sec  x 60 secs in 1 min x 10 mins per wave  =  18000 steps  ... 9000 steps in 1/2 a wave
+
+ 1800 = 1 min
+
+so - 0  =  start
+    9000 = midway
+  18000 = 10 real world mins
+
+soo the oringal game started at 1 min at the 1st level and worked its way up past that.. so im thinking maybe max time of 6 mins at 60th level?
+make the levels shorter but add 10 more of them...
+
+ WELL.. I MIGHT HAVE TO RE THINK HOW THE LEVELS ARE CREATED OR DESIGNED.. useing the timeline might nto be the way to go
+unless i use it for some kind of approval to spawn an enemy.. like have a fixed about of enemies per level then the timeline could trigger
+s random number that if the random number hits x or y  .. the enemy can spawn.. or there could be a mass lot of enemiess..
+say 50 in level one.. and at each second, the computer can spawn x number of them... so that the number of spawned enemies and its location
+is random.. the main issue is when the mission is over.. if there are still enemoes on screen, it looks bad.. just killing all enimes at random just befiore
+the end seams wrong.. don't match the story
+
+
+So the idea is to have 3 new globals..
+1 to state how many must be killed per level - set by the timeline
+global.LevelEnemiesNeed
+2 to track how many are spawned.. this stops spawning guys
+Once the number is hit.. need to update the spawners..
+global.LevelSpawnedEnemies
+
+ 3 to track each enemy killed.. once the level limit is equal to the
+Number killed.. a message will pop up stating a successful
+Mission.. else in 10mins.. a mission failed will show up
+global.LeveledKilledEnemies
+update obj12 with the squrd spawn counter above for each new instance create!!!
+
+The time line will spawn guys and dictate which enemy type and how many are spawned
+
+done - i added all the abvoe globals and object12 end step to check for all the mobs .. and it maps a sprite on the screen and then waits 3 secs and goes to the level beat.
+
+use :  global.enemyMovementSpeed  to increase difficulty.. 1 is really fast.. so 2 is crazy.. start is  .3 
+im  thinking..
+
+1 -10 = .3
+11-20 = .6
+21-30 = .9
+31-40 = 1.3
+41-50 = 1.6
+
+update: I have added the enemy movement speed from above to all 50 levels.. now i need to add the correct enemy spawns and the bosses...
+
+ Update: I have come up with the general way the levels will work.. now im working out the rest of the levels.. i came to the conclusion that I will
+               correct timelines 1 to 10 then make a duplicate of them and add the next enemy type in say 11-20 and 21-30 etc.. this will brake 
+	  all 16 spawners' create event.. need to take a screen shot of the end to make sure I re-code it back in correctly!!! this is much faster then
+	  adding 70 time lien entries about 5 times!!
+
+Fix the results screeen.. the total terrras is huge and there is a sawipe text un the bottom for some reason!
+	UPDATE: FIXED!!
+
+
+
+
+
+Level select / results room:  the results room is not writing to file.. the level select does not seam to lead correctly...
+                                                the loadign was done in the controller obj and the results screen should be writtign to file each time it comes up.
+ not sure what broke this!!! migth be the same thing that broke the other parts of the game.. maybe del and reloading
+ the objs will fix this issue!?
+
+level select - i want the game to auto swipe to the screen where you last played is whn u hit the continue campain button on the main screen...
+		 i think this is best done by making a gloal that is stored in the save file aftereach mission or it can be a value that checks the list and 
+		using the last entry,,, divides a number and then moves the objs on the screen like it was player swipes.. this might be good.. like the 
+		last played better..
+
+
+
+
+level list logic:  i think that the game controller object should create the list in its creat event and add the pos 0 item of "LEVEL LIST"
+  this way the list can be 1 to 50.. then when the player either goes to the level select or reaches the resutls screen,
+   the game should open the local save file and read the list of levels stored locally. and add to the lvel list the items
+  already stored on file.. then in the resutls screen, it checks the lsit size toward the currently beaten leven and either
+  adds a new entry or it replaces the current entry for the level ehat was beaten..
+ update: now the results room obj will check if the level is breaten and then set the alarm0 to 10 steps.. then the alarm0
+   checks to see if the level list tis smaller then the level number, if its smaller, then add the entry.. if not then
+   find the level pos on the list and replace it with the new level code... working
+
+
+
+Results room logic - im trying to figure out what we need to provide as feeb back to the player at the conclusion of each mission..
+ 1 - the score - want to move this to the center - logic done
+ 2 - global accuracy - want to move this to the center - logic done
+ 3 - if they hit a level milestore like a silver,Gold or platinum star - broze, silver and platium is done.. missing score for gold
+ 4 - a way to go back to the level select -done
+ 5 - a way to the store
+ 6 - a way back tp start - done
+ 7 - how much scraps they earned in the mission- want to move this to the center - logic done
+ 8 - scrap total for all missions (continuing count) - want to move this to the center - needs logic
+ 9 - a way to retry the same mission (hmm might be over kill but some players might like this) - done
+ 10 - a way to post thier achivements on social networks - facebook & Apple/Amazon
+ 11 - a way to go to the next level without going to the level select screen - done
+ 12 - the players best score on this level (not on this game.., its of little importance)
+
+  need to have the results open the file and write the restuls which include the new total scrap and the stars
+
+ code per level which is the same as the place in the list = 1000      (minium.. bronze star)
+ list name LevelList
+
+ update: the results screen now generates the level code .. now i have to work on writing it to file
+
+ update: the resutls obj alarm0 now stores the code in the list at is correct location.. now i need to
+   learn how to store the lsit on disk and then retrive it.. also need to detosry the lsit
+  before goign to room0
+ 
+    update: the level code replaces a previous level code if found.. need to have logic check the difference and write new changes
+    only!!!
+
+     update: need to fix the verification.. it writes the code even if its not 1
+ update: fixed.. now there is a glitch with the code complier that i needed to stick an extra char 4 check and set it to do nothing..
+   so leave the currentlevelbefore varible in there even if it does nothing..
+ LOGIC UDATE: i want to have the code generated by the create event of the resultsRoomObj not the stars..
+     i want the stars to check the stored list code for the level and display that!!
+ UPDATE: fixed.. it happends so fast it looks instant to the player. - done
+
+
+Star awards logic -  well I have 5 attribs and only 4 starts
+
+ 1 beat   -   bronze
+ 2 accuary -  silver
+ 3 points  -   gold
+ 4 untouched  - this one seams to be extra.. there is alreasy an ez achivement for this one
+ 5 hard    -   platinum
+
+Options screen stand alone - this is not working at all... if u dsiable the check for pause... it works but 3 functiosn are broken...
+
+Achivement screen from pause - broken! - looks like i need to code int he backobjs in order to get the follwer obj to not crash..
+         heres what i came up with:
+
+
+20,80 740,80 1460,80  2180,80   2900, 80  ( x+ 720)
+
+200
+
+
+320
+
+
+440
+  
+y + 120
+ 
+backOBJ = 1
+startX = 20
+startY = 80
+i = 0
+j = 0
+
+DeltaX = 0
+DeltaY = 0
+
+if backOBJ <global.AchiveIconNumber+1
+
+ if i<5
+ DeltaX=720*i
+
+ i+1
+
+ if j<5
+ DeltaX=120*J
+
+ J+1
+
+    create obj startX+DeltaX, startY+DeltaX 
+
+    backOBJ + 1
+
+
+
+for (i = 0; i < 10; i += 1)
+    {
+    draw_text(32, 32 + (i * 32), string(i) + ". "+ string(scr[i]));
+    }
+ }
+
+
+
+
+ startX = 20
+startY = 80
+DeltaX = 0
+DeltaY = 0
+j=0
+
+for( backOBJ=1; backOBJ<global.AchiveIconNumber+1;  backOBJ+=1)
+ {
+ 
+for (i = 0; i<5; i+=1)
+   {
+    DeltaX=720*i;
+
+    DeltaX=120*j;
+
+  instance_create( startX+DeltaX, startY+DeltaX, AchivementBackOBJ);
+
+    backOBJ+=1;
+ }
+
+if (j<5)
+ {
+    j+=1;
+  }
+    
+}
+
+spawner logic all types - got the standard, advanced, and the carrier spawner working.. need to re-do the squad spawning logic so that it can
+ some how get the logic to calc the spawn place and color while limiting the number of actual spawned enemies
+ while allowing for anythignt o be a squad from standard to ultras.
+ UPDATE: i now have the squad spawner doing the 1st three types.. what i need to do is the following.. 1 is give the squads
+        some spawn randomness.. they all spawn together.. but spawn at different times from the other squads..
+        i want to impliment the biggest squad logic.. somehting that limits the squad spawns to say the 1s few that only
+        spawn 3 enemies at once.. then add the ones with 4 then add the 5s and all in on the last two stations..
+         so in essence i want 3 man squds in station 1 (waves 1-10) 3 and 4 in sation 2 (waves 11-20) 3,4 and 5 in
+        station 3(waves 21-30) and 3,4,5, and all in at sations 4 and 5 (waves 31-50)
+  UPDATE: complete.. set up an if statment int he create of object12 that checks the level and sets the random max value
+ to the size it calculates!!!
+
+
+ 
+level select screen logic: this one.. im am going to work similarly to the achivement sceen.. have the computer check each board to see if it was
+        unlocked.. this can probably be done in the create screen since to unlock or change anything here needs to have 
+         a global variable changed. nevermind.. i realized that if its done in the create screen.. it only runs once and makes
+         everythign the 1st option.. thats y the code is int he step event!! 80)
+        thoughts: if i am touched and the level before me is cleared, then set the global level to me and togo the level screen
+       update:  i want the screen to scroll to scroll to the screen that has the last level that is unloacked.. to do this
+ im thinking about having a code that divided the unlocked total levels by the levels per page.. 9 in this case
+ and simulate x number of swipes to ge to the correct screen before the text and the icons are renedered.
+      update:  looks like the engine renders the icons in the order i place them in the room.. need to keep the correct
+ sequence here!!! also need a way to change the icon's star color and locked/unlocked state!!!!
+      Update: corrected how the rooms are numbered and the swiping with limiattions.. now i need the level logic for
+ each room basied on the attribs of each.. locked,unlocked,broonze,silver,gold,platinum..
+ LOGIC: Each room gets an indiviual number varible that can be used to check its attribs in the step event...
+ LOGIC: I can create a global.LastLevel   and the step of each will check its
+   level number against this and chane the sprite.. aslo the left button even can check if the last room numb
+   is less then or equil to the last level..  last level -1 is for the bronze attrib..  i need to come up with a way
+  to assing attribs........... hmmmm abouw about an array... might slow down the game if it has to check all
+ 50 levels for 6 states.. unless each room gets a code word or number like
+ level 1 = 10000     = unlocked,broze,silver,gold,platinum
+ level 2 = 0000  = still locked..
+ level 12 = 11010 = unlocked, bronze, gold
+
+ I was thinking of only adding the level to the list once it has been beaten.. this what if its on the list, then
+ its atleast a bronze and we use list size -1 to unlock all the levels behind and the next one to play
+
+ thinking about the arry with just 1 level instead of 6.. like  i=0, if i<6, check char at (LevelNums(levelnum),i)
+ if thats tru or 1, then create sprite xyz at self.y + xxxx of if the 5 check is tru.. change the spr to image 2 (plat star background)
+
+ UPDATE: just relaized that this one star idea is lacking.. if somone gets untouchable.. they will never see the
+       silver star for example.. needs to be 3 starts and the platinum star as a big star in the background
+
+dsb100sa100 string_char_at(str, index);  after the level code is loaded from the list location, use this to check for the attribs
+ num = ds_list_size(control_list);  i can use this to check whats the last level beat.. so the unlock would be the size +1                                        anyrhing less the size +1 is  unlocked... so image 1 
+     ds_list_add(id, val);   this done during the results screen.. it adds the "11000" to the end of the list after the level is  beaten
+ ds_list_find_value(id, pos);  this is to check the levels for the values.. load the level's code
+ ds_list_write(id);    used to save the level info to file - see below
+ ds_list_read(id, str);  used to read the level info from file -see below
+
+ 
+ saving the level info:
+ var str;line ini_open("save.ini");line str =ds_list_write(list);line ini_write_string("Lists", "0", str);line ds_list_clear(list);line ini_close();
+The above code opens an ini file and then writes a string containing the information stored in the ds_list indexed in the variable "list". The list is then cleared and the ini file closed.
+
+
+ reading the level info:
+ list = ds_list_create();line var str;line ini_open("save.ini");line str = ini_read_string("Lists", "0", "");line if str != ""line{line ds_list_read(list, str);line}line ini_close();
+ LOGIC UPDATE: so.. we add the name in slot 0.. the size of the list will be 1.. this will set the level 1 to be unlocked. Once its beaten,        in the results screen, we can add the level code for silver,gold, platinum and the list size will now be 2.. the level 2
+        will now be unlocked.. so the unlocked boards will = the size of the list..  also, when leaving the level sect screen
+       the list might have to be destoryed and re-read from the local fone file each time.
+d thinking about the arry with just 1 level instead of 6.. like  i=0, if i<4, check char at (LevelNums(levelnum),i)
+ if thats tru or 1, then create sprite xyz at self.y + xxxx of if the 4 check is tru.. change the spr to image 3 (plat star background)
+ so now there are only 3 attribs to each level and we can do a search for each one.. prob best to use a for loop that
+ stops at the list size.. so we don't run thru all 50 levels when they still haven beaten the 1st one.. sudo code:
+
+ if image == size of list  then change sprtie to image + 50  (unlocked version of the same shelf)
+   if i< size of list 
+  { CharCheck = ds_list_find_value(List, i)
+   
+    if   string_char_at(CharCheck,0)   == 1 && image == i then create silver star spr at x,y
+    if   string_char_at(CharCheck,1)   == 1 && image == i then create gold star spr at x,y
+    if   string_char_at(CharCheck,2)   == 1 && image == i then change sprite to image +100   (big platinum star background)
+   } 
+ i++
+
+ update: i am using the image of each level to diffienciate them.. so like the achivment icons, the logic can check if the image
+   is the same as the room number and change the sprite to  image +50 for unlocks or +100 for platinum
+dsb100sa100   Im thinking of using the original drawings in inscape to draw the numbers on here.. removes more code!
+ update: moved the unlocked check into the create event.. want to add the star check here as well
+d   UPDATE: finished. everythign works.. from the unlocked sprite to adding the different stars to beening able to click to play
+        a level and not play the locked ones.. need to add a 1000 when a level is beaten if there are no other starts
+
+ UPDATE: added a level confirmation message and finished the logic by setting the global gamelevel to the level 
+       and each spawner checks the game level and sets it's timeline accordingly
+
+
+
+Options screen logic - I only have 2 items for the options screen.. I need a 3 and 4th global varible for the virtual back placement..
+   Im thinking about having the buttons be switchable for Left and right handed people.. also am thinking about
+   having a difficulty option for normal and hard. hard means enemies spawn faster and is the only way to unlock
+  the Hardcore achivement .. get a platinum star on every level!
+
+ Total options:
+ 3 icons for the different control types - logic done
+   Acceleromter center point correction - done
+ Left or Right hand - done
+ Move the virtual joystick anywhere on the screen - done
+ Music volume slider - done
+ Sound FX slider -  done
+ Difficulty - done
+ Game version number -done
+
+
+Achievement scree logic - need to make logic to allow scrolling and swipping would be execellete!
+           I think the line on the bottom of the screen to indicate how far you are right is a good idea.. 
+ Notes: make the icons overlap each page.. so that u can see the edge of the next icon to the left or right of the screen
+ UPDATE: I found a good simple swipe code that i converted into graphical and have imported the resources..
+ SwipeController and FollowerOBJ... which is more of a page maker that goes in the opposite
+ direction of the swipe.. the achivements themselves have to be created in code so they can be shifted
+ or.. since this will not be a pause menu option anymore.. i can leave them hard coded and just shift them..
+ the deal is can i affect all them? maybe they can all get the same +/- when a swipe happends.. this sounds
+  like it could work nicely.. left space for 3 new ahcivements for the DLC all for being the bad guyz.
+ I want to give the player some scrap when they unlock these achivements.. not alot but the harder one give more
+ scraps.. this will further give the players a reason to keep playing and try to unlock these achievements..
+ I want to add the total unlocks on the upper right hand corner and the back button in the top middle.
+ UPDATE: finished the swip code.. it basiclly moves all 21 achivment icon backgrounds x pix left or right
+         and used the follower obj to limit the movement to the left or right.
+ UPDATE:  nearly complete.. need to figure out the moniterizan to do the last 3 or 4 achivements
+
+ LOGIC: when the achivevement critiera is met, add 1 to the global.NumberOfAchivUnlocked
+
+
+
+
+move the vitrual joy - i think there should be a goloab.customJoy variable that if set to 1, then jumps the joystick to the players per-set X and Y.
+ if not, then use the standard L and R settings.
+
+
+scan line logic - might slow down the scan line or make it thinker and only 1 line.
+
+
+Difficulty code logic - I will have the difficulty be 1 for normal and 2 for hard.. this global varible will be coded in the speed of the timmer on
+  each spawner.
+ update - done.. in each spawner
+
+
+
+   
+
+
+
+
+
+Enemies type and movements - need to set up the move emnt of each type of enemy 
+
+STD = STD movement - vanilla - 1x STD
+Advanced - STD with spikes -  1.5x STD - STD spawing movement - cloaking
+Super - looks like a big blade - 2x STD - wave movement
+Carrier = using STD movement but slower and does more damge to the station if it hits.. 2.5x STD damage
+Ultra - spinning wings - 3x STD - wave movement - cloaking
+
+
+endless mode logic - looks liek we can make a sperate time line that measurs the board lenght and leave the spawing one alone..
+  this way, I can set the spawning one to loop and have a speed increase every time it finishes.. this will be cool
+ for endless mode.. realatve .2 was fast took a min though.. so maybe .1 or .05 at the end of each spawner to
+ get a slow but gradual increase in dificulty.. also make a seperate time line just fo endless mode.. slowly
+ adding more and more of the advanced enemies as the time line progresses... no boss!!
+ 
+
+Menu logic - got the game to go to the results room and then back to the start room.. needs 99% more work
+ update - found a way to make the text for the button labels animate like it was being typed.. love it!!!  I want to use
+    hollogram 3D icons for the main screen if possible.. if not realy kool 2 color icons.. the holograms
+    might not fit with the text 16 seg retro look.
+
+Timelines specific to the level - usng the GameController obj, I can set the timeline to use and only need to set up one room where 
+       all the spawners will go.. this goes leaps and bounds to make my game smaller.. not 50 rooms with the
+       same objs.. just one room same objs different spawns and spawn times.. GOLD!!!!
+
+
+sine wave enemy moviement logic - got goign from top to bottom to work.. next is bottom to top and left2right and rigth2left.
+ note:  use global.enemymovemnt as the speed indicator.. might have to recode it...
+ update - got it working.. how ever.. only in the middle of the 4 direcitons - top/bottom/left/right.. tring to work on the 4 corners
+    the orginal notes are bellow
+ update - made and object that moves top-down-left-right and diagle.. but its too random..
+ update - fixed the issue of the paths not working by checking the distance to the sation and if 1 or less.. its a hit!!!
+ update - this will be pulled.. would liek to save the resource to use in other games
+
+
+Turrent rewpawn - i have the turrent set the alarm0 of object 12 to the repawn delay and 4 point of spawing choosen at random
+ update - the turrent now spawns after the turrent ring animation completels which sets the alarm0 of object12 to the repawn delay
+
+Turrent HP marker - The turrent is not chaing colors to indicate its HPs... must look into.
+ update - corrected issue
+
+Station HP -  done - there is an issue in the notes that states the HP must be set back to max HP
+
+
+
+
+cloak logic - got the clocking to work.. right now it works on all directional enemies which is not what i want.. but the coding is done.
+
+sprite font:  got it working.. here is the code needed to draw any varible..
+ draw_text_ext_transformed(x, y, StationDistance, 3, 100, .5, .5, 0);
+ (StationDistance is a varible.. 3 is the space between sprites. 100 is max sprite lenght.. .5 /,5 is the scale in x and y, 0 angle)
+
+
+
+Menu background - i was thinking that the background should start with ICON that will be in the APP store.. then fade out then in every 2 secs
+ to a different still of the game.. was thinking about usig BLENDER to render some hot sceens and then splice then together..
+  these sceens could be off differnt angles.. maybe see more of the turrent.. of the base... of the basic enemies.. asteroids..
+ planets... basicly giving the user a differnt viewpoint of the game then just over head.. but these could be in black & white
+ or full color but dulled out like a window that is not in focus.. its basicly a slide show.. that repeats
+ update - tried fade to blacn and black and white.. a slow fade to black looks good.. just that all that action is in the middle..
+   the other pic idead above should work great.. its just a simple menu but i think it will work out..
+ update - i liked the light blue with white boarder and white text.. maybe i can make the 16 seg display white
+     have a white glow boarder and have a circle like repateding pattern in the back of the menus... this is all
+     alpha out and we can see the slide show of different game play sceens in the background
+ update - tried this and it looks to cartoony and less serious.. feels out of place.. will go back to the side show idea.
+
+
+laser logic - done.. need to work on timing - leave the 1st frame of animeation blank to "off state" its needed for the animeation end event
+ update - the off state is no longer needed... i created a begin step even to act like a timmer.. setting a global variable
+ to the number of frames the laser animation can run is a way to make it last longer.
+ update- the transform sprite's Y offset can make the beam wider.. in object12.. there is a global.delayLaser that is set to
+   200 right now.. can be lowered by upgrading. Setting the begin step to a higher frame of the animation makes 
+   the beam last longer.. this is a double edged sword.. since I can not slow the players movements... a beam that
+   lasts too long will be able to clear the entire screen in one swipe.. which is not kool.
+
+missle splash damage - done - has smoke trail.. does splash damage..
+
+
+accleetrometer logic - hmm not really workign out.. i think i need to fix the global.directionShot.. but i have a deltaX and deltaY.. need to get a direction
+ from them....
+ update - I think that its very simple.. make an accelObj with an x and a y location on the screen that is invisable to the player.
+ this will the change with the Delta X and Delta Y.. when moving the turrnent, instead of using the mousex, mousey
+ you would use accellOBJ.x and  accellOBJ.y to help make the angle with the center of the screen.. also set up
+ limits so it don't go too far away from the center.
+ update - i think this all mess has to do will calibration.. maybe in the options screen when the player chooses to use
+ the accelleromter as a control type, the game acan ask the player to hold the fone in a confertable spot and hit
+ a button.. that will be come the new origin for the accellOBJ (0,0) and movement to the left, right,up, or down
+ is a motion to be uused.. if the player holds the fone the same way, the ball should go back to the center and zero out.
+ update - got the accellOBJ working correctly.. its hard to play like this but it works.. i want to work on not havint to tilt the fone
+    up so high in order to go up.. making the multiplyer 35 only move it fast up once the titl was achiveved.. no good
+ update - got it working by -89 to the x tilt.. issues with some locations.. i am thinking to not follow the ACCELLOBJ directly
+   maybe i can use its X and Y to move the degree and act like a mouse or a touch on the screen!!!
+ update - fixed the accellerometer with the type 2.. its hard to control but works... wan to set this 0 offset of -89 to a variable
+ that can be controlled in the options menu for more personalization- done - a global accel center calribation in 
+ object12
+
+click-to-fire logic - This one i want to use the classic global LMB click with a check to see if the click is on the speical attack button or the pause
+  I wan to fire when releasing with counter in the step even to act as the charge button for each sec pressed, add 1 to the 
+ bulletSPR frame..
+
+
+
+ nuke button - destorys all the ememy icons on screen.. need to disable it when can not be used 
+                      - update - i have made all the speacial attacks work.. they all can be diabled.. working on chaicng the icon to slow there is none left of that
+                                       type of attack.. a prob is the icon is changed int he STEP event... need to change how the icon is displayed.
+                      - update - used the STEP of the nuke button obj to check if the attack type was 0, then change it to the B&W colored icon if it can't be used.
+                      - update - made a local variabel to count the number of nuked enemies.. will have to have it count each enemy type to get the total score. 
+        The best part of this is that the nuked enemies do not count toward the accuracy but do count for the score!
+           - update - the frozen/stoped animation has to look like the lighting flows.. from one from tot he next witch is cool since there are 360
+      frames.. the lighting can go all over.. even the stoped will look good since the eneimeis will still have some roll in them.
+ update- it is broken again.. now it does the FX but the enemies still attack.. then after a min.. it sends them back they never come back
+ update - i tried all the specials.. they are all broken.. nuke doesn't work.. I tried removing the begin step event. no dice.. i verified all
+    the code to the working old game loop.. its all the same.. i dunno where the issue lies.
+ update- fixed it.. looks likt this only works with its own spereate event.. i put the code back onto a LMB press not a global press..
+    this works with the mutli touch as-well. WOOOTT!!
+ update-  this is broken.. must fix
+ update- fixed again... needed to change what got counted to each type of enemy.. also added a 100 point per nuked enemy!!
+
+
+             ship explosions - the ships exlopode into little rings of yelllow... might change that to green.. make it more alien then the nuke!!
+ update - changed to mediaum start in purple.. looks more alien and looks like the ships are "warping out"
+
+pause button - thinkign that I have to add a pause screen object to display the ad and other mini buttons when the game is pasued
+                          -update: can get teh screen to pause and have a pic of the screen before the pause.. however.. no new items will be 
+                                             created.. im goign to try creating and object in code right after the disable all part.. see if that helps
+  -update: by making a transparetn tbackground with a small dot , the game takes a quick screen shot and uses it. 
+
+   Virtual joystick - with fire button - need to fix a bug where the game donest fire if the joystick is not on the screen
+ update - fixed muti touch with code on the step event of the fire button.. going to try other ways.. it gets ramdomly locked up
+  im not sure y it does that.. there is an expansion and virtual keys i can try.
+ update - mutli touch is causeing all sort sof issues.. i think that once i go multi touch, i have to do it to all.. so the last obj that uses
+   mouse.x or .y is the virtualjoystick obj and the nuke button.. lets make everything multi touch compatiable..
+  I am thinking about making the object12's step the mutli touch checker.. it checks if the LMB(i) is touching x and sets a global
+  varible to 1 and that will trigger the corresponding action in each of the items step objects.
+ update - made the degree a gloabl varible.. now can shot 1 or 3 shots.. shooting os fixed.. might want to put in an IF that checks
+  is there is more then 1 finger before firing.. this way we don't get the crazy shooting from the left of the turrent..
+
+Clip seg display - this is what I have to work on next.. i have it done in FLASH.. need to impliment it in GM:STUDIO
+                    update: string_char_at(str, index);     empty string "" is returned if there is no character at that index
+                                 global.clipsize,   global.bullcount >= global.clipsize; set global.bullcount to 0; wait time to re-fire is set to 100 steps
+                                 update - there is a glitch that when the coutn reaches 10.. it jumps to 11 and stays there until reload time
+         update - got it to count down how many bullets left int he clip .. now i need it do do the relaod animation when its reaches 0
+                                update - using two sprites to make the relaod animation.. i set a global variable to the relaod dealy so that all the animations
+                                               will be in sync with the upgrades..
+        update - this is now broken.. the left shout counter obj is now not changing to the reloadL like it should. the right is totally broken.
+        update - this is working better now.. but if the player does nto have the shot button down or if there is 1 bullet left, the reload animation
+     happends and it is confusing.. maybe i can move the change to the relaod animation obj right to where the bullets get
+ changed back to the full clip.. right now they are in the step event of the object12 controller
+       update- I think this is broken because of the speed of which the game sets the gloabl variable back to a full clip.. if this could be 
+ delayed with an alarm.. then the animation will both change to the reloading and wait the time to set the clip back..
+      update - FIXED!!! i moved the change to reload animation to the fire button's step even under where it checks for the amount of bullets
+                     shot.. this synced the animation with the relaod.. NOTE:  make total clip sizes a multiple of 3.
+ 
+(the below might only be cuz I have to overlay the virtual joystick on top of the fire button)
+ the turrent now roatets with the shot.. need to fix the shot direction.. its off by like 5 degs. 
+wokring on it.. found that if we set the x/y of the bullet to cal and then add the x/y of the turrent.. it shoots the bullet out a few pix out.. which looks good.. but if u turn the turrent too fast, it looks like the shot comes out tof the side.. but it was good before it was turned.. maybe i have to slow down the turing
+rate of the turrent's muzzle... that cousl fix the glitch!!!
+
+ 
+spawer logic: im going to try to make each enemy type its own object.. this way i can modify the speed of each ship and multiply it by a speed.. this is  needed for the freeze speacial attack
+ update - looks liek if i want to use paths then i have to work somethign out.. need to figure out negative path speed.
+ update - see below for path movement... 
+ update - wait a tick... when the enemy is spawnes, it has a direction.. if ic an grab that direction and make it 0-15, then i can change the
+    the image dispalyed to the correct orintation and set the correct path orientation...
+ update - using the direction, i was able to make the paths match the direction. Can make the paths on the fly, but its better to harcode
+    them.  Tip - make one direction ( left 2 right) then rotate the path 45 deg say and make the rest of the 7 paths
+ update - i am using the limit the amount of spawns and in the step event of each spawner, there is 1 D10 roll of 6 or higher to see if
+ this spawer will spawn one.. if so, it does and removes 1 point from the total allowed spawns... this way there is still
+ some randomeness to the spawns and i still control the difficaulty.
+ update - corrected the spawn directions.. looks good now. also changed to the standard enemey icon. added a distance to the 
+ station.. might make this almost like the ST Legacy map screen.. adding ditances..
+ update - check the squad spawner for more info.. implimeted it.
+
+
+fire bullet - was thinkinh that it might be cool to have a wave movement on the bullets... not sure if this will make th humans too much like tha enemy
+  it looks odd but heere is the coding logic:  x = xline + sin(direction)*100    /// 100 is the ampiltude of the wave and xline increases +1 
+ per step. y = xline + cos(direction)*100
+
+
+charged shot - i think that we can have an alarm add 1 to advance the frame which makes the bullet get bigger for ever sec the button is held down.
+ update - this is working 100% - i can add more sprites to the bullet SPR and change the max charge from 8 to x
+ update - made a FX where the player can see the bullet charge before firing.. it follows the turrent and pulastes from big to small.
+ 
+
+Path movement enemies: setting the path and start point speed are all done int he create task, if not, the enemy will appare to not move.. what is really
+ happening is that it resettign its position on the path to the start on every step.. repell, stop, and freeze all still work..
+ Need to set the path speed in the Step event to the global enemy movent variable to allow the super attacks to work.
+ update - fixed the paths.. so going counter clockwise from the lower right to the middle left, each can get the apparoipate
+    path and have its own icon.. then set the path as described above!
+
+Time line spawer -  need to work on this. see below spawner section...
+
+
+
+Spawner - looks like we need more spawners.. like the 16 there were origianlly. it also appers that we need a way to allow and not allow spawing to a 
+ speific spawer even if the spawntime is 1.. would like to make a drawning or data to be read by the engine.. this way i can get groups
+ or clumps of eneimes.. another way is to set up a way system.. this could recycle and not have 1000 per level.. yet another is a way
+ to make squarons.. this way the ememies can clump together and spawn at the same time.. liking the waves idea even if the player
+ will never know what wave he is on... might have to make 16 differnt spawner objects to help with the wave level designs...
+ I.E. i can trigger spawner0, 1, and 2 to make a squad of 3 ships attack fromt he upper left hand side of the screen.
+  update - i might just have a system that limits the number of spawn that can go.. examoke.. on the time line at time 100, i could
+  pllace a maxSpawn varible and set it to say 3.. then all the spawners will spawn the enemy and subtract 1 from the total. once
+  all 3 are used up.. the rest of the spawners can not spawn.. this limits the amoutn of spawns and can be scaled to make
+   the later levels more difficault by allowing more spawns sooner.. not sure how to make clumps or squads though... hmm...
+ update - i had an idea for the squads / clumping... if there are 16 spawners, then set the spawntimer to 1 on a speific spawner
+  on the time line.. so lets say i want the top left three.. i can set the spawner0,1,2 all to high and leave the rest of the random
+ spawns alone.. this way i can control the squads and the amount of random spawns and still have some randomness.. another
+ thougth is to make an arrary that holds all 16 spanwers and use that.. yet another idea is to make a random squad selector...
+ this will roll a random number for the amount of ships int he squad.. this can be anywhere form 2 to 16 and then assign a
+ squad pattern to it.. or like have a top left squad, lower squad.. left side squad, all in squad, left bracket squad, right bracket squad,
+ 4 corners sqd, 4 winds sqd, upper right squad,  and assign them a number.. then the compuer selects a number and
+  makes the spawntimer 1 for the required spawners to make the squad.. i really like this.. this plus the limited but random
+ spawns will make the game look more orgnaic and still be random and scaleable in difficulty.. was thinking that the squads should
+ have the same color which is different from the normal color of the ememy to siggnify that they are a squad.
+  update - tried using spawnAmount to limit how many spawn.. it kindda worked.. but i was not satified.
+ update - maybe each step should ask if the spawner will spawn.. im thinking more like D&D for example:
+ is there a spawn... is there a squad? if not how many are going to spawn.. using a global.variable to keep track
+  is it a squad.. roll a number 1 to 10, if the number is 6 or greater, we get a squad.. then roll a number from like 0 to 20(total numner of squads) then set the spawnable to 1 on the correspoding spawners to make the squad.. this can also be useful for the DLC..
+ touch the spawner to lauch normal.. touch squad icon to launch squads.. the more memebers of the squad, the higher
+ the cost in energy to launch them...
+ update - tried changing the sprite at the create event of the direction enemy and it didn't work... also tried chaing the sprites color..
+    no dice either.
+ update - im thinkign about making a temp global variable that will have all the peritante info.. squad, enemy type...and it will be set to 0 
+    after all the enemies of that squd have been created.
+ update - this is kindda working.. i do see a sprite change for the 1st 4 or 5 squads... need more tests...
+
+ update - just realized that i would need to make like 200 spawners one for each room.. the solution to this prob is in the create of
+    each of the 16 spawner objects, make an if check to see what level the player is playing set the time line to the correct
+    level.. 50 if statements on each spawner is better then 200 spawner objects.
+
+Squad spawner locgic - squadron designators: Lower Left; Bottom, Lower Right, Right, Upper Right, Top, Upper Left, Left, 4 Coners, Cross, Lower,
+      Upper,All Left, All right,  All in. 
+      update - i am thinking that if we can have the direction enemy as a standard enemy... them if I can change the sprite and the
+    status: hitpoints, damage, speed, points, movements.. we can have all the enemies sapwn form these basic two
+    types.. all using the STD enemy as a base... so like STD + 100 for hitpoints.. etc...
+
+ 
+enemy movement idea - was thinking that ever once in a while, a big enemy spawn would be a few times larger then the normla size and scale
+       in (get smaller) as it gets closer to the center.. this will add a 3d feel to the game so its not just top-down..
+
+
+saving info :
+
+save  -
+  ini_open('data.ini')
+   ini_write_string('data', 'data', json_encode(yourDSMap))
+  ini_close()
+
+
+loading - 
+
+  ini_open('data.ini')
+  yourDSMap=json_decode(ini_read_string('data', 'data', '0'))
+  ini_close()
+
+
+
+
+BUG - remeoing all buttons and virtual controler:
+ 
+
+___________________________________________
+FATAL ERROR in
+action number 1
+of Create Event
+ for object bullet:
+
+
+
+
+ 
+
+############################################################################################
+VMError!! Occurred - Push :: Execution Error - Variable Get 31.timeCharged(100073, 0)
+ at gml_Object_bullet_Create_0 (line 20) - image_index=floor(ChargeFireButton.timeCharged);
+############################################################################################
+############################################################################################
+
+
+
+
+virtual jotstick logic:
+
+if can_fire = tru
+ and there is no virtual joystick
+  then do the following:
+
+
+
+if can_fire = tru
+ and there is virtual joystick and the fire button is down
+  then do the following:
+
+
+
+
+
+
+puase button code:
+here is the old test code for future reference:
+ in the pauseButton object's left click event:
+tab //pauseBCK = sprite_create_from_screen(0, 0,room_width, room_height, false, false, 0, 0);
+tab //draw_sprite(spr_custom,0,0,0);
+tab //instance_create(60,60, object8);
+tab //draw_sprite(spr_custom,0,0,0);
+tab //instance_create(60,60,object0);
+tab //draw_sprite(pauseBCK,0,0,0);
+tab //instance_activate_object(PauseController);
+tab //draw_sprite(spr_custom,0,0,0)
+tab //draw_self();
+ 
+
+
+notes: im thinking about haveing a object the just controlls the types of objects..
+           for example = an enemy controller.. this checks what type of enemy is to spawn and sets the global vairables accordingliy
+                                   like enemyType =2; enemyHPs= 200; enemyDamage=-300; enemyMovement=2, etc..
+                                  (it can alsoo check the fixed level info to see how many of what type to spawn per level)
+ 
+
+
+  notes to count bullet shot:  SOLVED ( scroll to very end) - will just tally all the shots taken and divde by the bulls per shot then dive that by the total
+                                                                                                   shots taken.. will give a closer accuracy approximation!!
+
+global.total_bullets counts adds up all the bullets shot.. this variable can be stored in the phone after each successfull mission
+and loaded before a new mission. the test print is the green numbers at 0,0
+
+made bullets per shot a global variable
+made bullcount a global variable
+
+ global.score_multipier is in object12.. it goes down by 1 every time the bullet goes beyond the screen. each time an enemy is hit, the mulipler goes up
+      by 1. the object12 step event checks to see if the multiplier is less then 1, if it is, then it sets it back to 1.
+enemy now reduces the score multipler by 1 if it hits either the player and/or the station(object12)
+enemy now in collison event with bullet, multiplies the normal points times the multipler 
+
+wishlist: I would like the multipler to display on the UI as " x??" for example : "x34" I would like both the font to get larger and the colors to change like
+in "Bleach: Soul Resurection" but alwasy stay to the left or right of the screen edge
+
+
+my notes on how to use an array to use the score multipler on more then just 1 bullet at a time
+  
+maybe we can try something else.. how about using fractions or decimals to determine if at least 1 bullet hit
+an enemy..
+
+so the idea is this.. we set up either variables(best) or a list/arry with a value that is divisiable by the bulls per shot..
+for example.. we set shotGroup0 = 9 where the  bulls per shot is 3.. hence there are 3 3's in that value.
+thus, if the shotGroup bullet hits an enemy, we can divide the vaule or 9 by the bullsper shot which will leave us with
+shotGroup0 = 6. then we test if the shoutGroup value is 0, if so, then all the shots have either it or have gone off the edge of
+   the screen..
+(somethings wrong here.. need to distingusih between hitting an enemy and going off the edge)
+
+a possible fix for the issue above is to set the shotGroup value to somehting big.. say 100 x shoutGroup x the bulls per shot x the bulls per shot.. then test it if the shotGroup is 100 before doign the calauationd to determine if all the shots in taht group are gone..
+
+so an example run of the code will be as follows
+
+bullet is created.. shotGroup = bulls per shot
+if shotGroup > 100 then add 1 to the global score multipler
+else ...
+bullet is off the edge.. shotGroup = shotGroup / bulls per shot
+if shoutGroup < 0 or 100 x bulls per shot ; then all the shots are done for this group.. then reset the value to shotGroup = bulls per shot
+bullet his an enemy.. shotGroup = 100 x shoutGroup x the bulls per shot x the bulls per shot 
+<need to work out how to handel the start... i think this could work.. ui also think that the 100s will not conflict since one of them only happends to be 
+   checked if the shot hits an emey..>
+
+
+so we grab the bullets shot group, and set i = to that shot group
+
+then we test the total shot grou positions which is found in global.BullsShot
+
+so while (j < global.BullsShot)
+{ we test each pos in the shot group to see if its empty or 0, if not then add 1 to j
+   until we find an empty spot, then fill with instance ID of bullet}
+
+shotGroup[i,j] = instance ID
+
+
+then if the bullet goes outside of room, we test each of that bullet's shot group places for a
+hit inidcator.
+
+
+
+new idea:
+ so we grab the bullets shot group, and set i = to that shot group
+
+then we store shotGroup[i] = bulls per shot
+
+if the shot hits an enemy, we get the:
+
+ ABS(shotGroup[i]) x -1 ( this will ensure a -1 even if there was a previous hit cuz -1 x -1 = 1)
+
+then reduce ths number of shot by the .9
+ 
+shotGroup[i] = abs(shotGroup[i]) - .9 x (sign(shotGroup[i]))
+
+
+
+ if the shot missed (is outside the screen) then:
+
+shotGroup[i] = abs(shotGroup[i]) - .9 x (sign(shotGroup[i]))
+
+check if shotGroup[i] < 0
+
+if so check if shotGroup[i] is a neg ( might already be done with the above chec)
+
+shotGroup[i] =  bulls per shot
+
+
+if NOT , then
+
+multipler = 1 ( reset the score multipler back to 1  cuz all the shots missed)
+
+
+
+coded out after each event .. either out of the room or hit an enemy.. this way we get to keep the sign all the way to the end without conflicts:
+
+shotGroup[i] = abs(shotGroup[i]) - .9 x (sign(shotGroup[i]))
+
+
+
+coding:
+
+dsb100sa100 abs(x) Returns the absolute value of x.line sign(x) Returns the sign of x (-1, 0 or 1).
+d
+
+dsb100sa100 variable_global_array_get(name,ind) Returns the value of index ind of the global array variable with the given name (a string).line
+variable_global_array_set(name,ind,value) Sets the index ind in the global array variable with the given name (a string) to the given value.
+d
+
+
+
+
+or for 2 gird array
+
+dsb100sa100 variable_global_array2_get(name,ind1,ind2) Returns the value of index ind1,ind2 of the global 2-dimensional array 
+                                                                                     variable with the given name (a string).
+
+variable_global_array2_set(name,ind1,ind2,value) Sets the index ind1,ind2 in the global 2-dimensional
+                                                                                     variable with the given name (a string) to the given value.
+d
+
+
+SOLVED:
+
+how about K.I.S.S.
+
+each shot carries 2 varibles
+
+ its shotgroup shot number
+addToAccu value
+
+
+so when a shot hits an ememy.......... its addToAccu =+1 and its ShotGroup[i] =-1
+     when a shot goes outta screen...  its addToAccu =-1 and its ShotGroup[i] =-1
+
+if  ShotGroup[i] <1
+  global.AccuracyDelta = addToAccu
+
+
+
+global.Accuracy = global.AccuracyDelta / global.total_shots
+
+ 
+
+
+---breaking this idea down:----------- (same info as above in more of an gamemaker syntax)
+
+in each bullet object:
+
+
+Shot_Group = global.bullcount/global.BullsShot       <-- this is so it does't have to re-calculate it if an event happends
+
+if hit enemy              <-- i think this function is really in the enemy's events so I put the shot group -1 here as well
+addToAccu =+1
+ShotGroup[Shot_Group] =-1
+
+ 
+if goes outta screen
+addToAccu =-1
+ShotGroup[Shot_Group] =-1
+
+
+if  ShotGroup[Shot_Group] <1
+ global.AccuracyDelta = addToAccu
+
+
+
+
+---------------------------------------------- sine wave movement original notes ------------------------------------------------------------------------------------
+
+
+
+x+(sin(90)*Dy)+(sin(t) *10)
+
+Dy  - how fast the obj moves thru the line (diangle)
+10 - how large the cirle circumference is
+t - 
+
+
+
+
+
+
+
+
+
+
+originals from book:
+
+x
+y
+
+xline = x
+
+dy = random() * 3 +10 (movement speed)
+t = random * 6.28 (its position on the sine wave)
+
+
+ x = xline + sin(t) *100 (its position down)
+y += dy
+
+
+t += 0.1
+
+-------------------------------------------------
+
+
+
+ Dx
+DY
+lineMove
+t = random(1)* 6.28
+
+
+y< 0
+
+lineMove = x
+Dx = lineMove + sin(t) *100
+Dy = random(0.3) * 1
+
+
+y> 400
+
+lineMove = x
+Dx = lineMove + sin(t) *100
+Dy = -1*(random(0.3) * 1)
+
+
+x< 0
+  
+lineMove = y
+Dx = random(0.3) * 1 
+Dy = lineMove + sin(t) *100
+
+
+x> 300
+
+lineMove = y
+Dx = -1*(random(0.3) * 1)
+Dy = lineMove + sin(t) *100
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+errors:
+
+
+ ___________________________________________
+FATAL ERROR in
+action number 1
+ of Draw Event
+for object object12:
+
+############################################################################################
+VMError!! Occurred - Push :: Execution Error - Variable Get Accuracy
+ at gml_Object_object12_Draw_0 (line 2) - action_draw_variable( global.total_shots, 0, 0 );
+############################################################################################
+ Self Variables : 
+ShotGroup = 0
+Global Variables : 
+enemyType = 2
+score_multiplier = 1
+shot_group = 0
+bullcount = 0
+BullsShot = 3
+total_shots = 0
+bullType = 1
+ AccuracyDelta = 0
+
+
+}
+'00
+}
